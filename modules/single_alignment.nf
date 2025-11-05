@@ -1,9 +1,9 @@
 #!/usr/bin/env nextflow
 
-process MULTIPLE_ALIGNMENT {
+process SINGLE_ALIGNMENT {
     tag "$sample_id"
     container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/multiple_alignment", mode: 'copy'
+    publishDir "results/${sample_id}/single_alignment", mode: 'copy'
     cpus 4
     memory "2G"
     input:
@@ -16,15 +16,21 @@ process MULTIPLE_ALIGNMENT {
     path("map.bai"),
     path("stats.txt"), 
     path("number_reads.txt"), 
-    path("${input_ref.simpleName}_index.tar.gz"),
-    path("$input_ref"),
-    val("$sample_id"), emit: multiple_bam
+    path("first_index.tar.gz"),
+    path("first.fasta"),
+    val("$sample_id"), emit: single_bam
     path("references_list.txt"),emit: reference_list
     script:
     """
-    bowtie2-build $input_ref ref
+    samtools faidx ${input_ref}  
+    
+    sed -n '1p' *.fasta.fai | cut -f 1 > seq_names.txt
+    
+    seqtk subseq ${input_ref} seq_names.txt > first.fasta
+    
+    bowtie2-build first.fasta ref
   
-    bowtie2 --no-discordant --no-mixed -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $input_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
+    bowtie2  -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT first.fasta - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
     samtools index -@ ${task.cpus} sorted.bam sorted.bai
     samtools idxstats sorted.bam > stats.txt
     samtools view -c sorted.bam > number_reads.txt
@@ -32,7 +38,7 @@ process MULTIPLE_ALIGNMENT {
     samtools index -@ ${task.cpus} map.bam map.bai
     
     
-    tar -czf '${input_ref.simpleName}_index.tar.gz' *.bt2 
+    tar -czf 'first_index.tar.gz' *.bt2 
 
    #generate list of references in bam file
 

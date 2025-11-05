@@ -3,7 +3,7 @@
 process SPLIT_ALIGNMENT {
      tag "$sample_id"
     container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/single_alignment/${contig}", mode: 'copy'
+    publishDir "results/${sample_id}/multiple_alignment/${contig}", mode: 'copy'
 
     input:
     tuple val(contig),

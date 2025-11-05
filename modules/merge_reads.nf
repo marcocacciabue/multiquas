@@ -3,7 +3,7 @@
 process MERGE_READS {
      tag "$sample_id"
     container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/single_alignment/${contig_name}", mode: 'copy'
+    publishDir "results/${sample_id}/multiple_alignment/${contig_name}", mode: 'copy'
 
     input:
     tuple path(s_1_fq), path(s_2_fq), path(o_fq), val(contig_name), val(sample_id), path(contig), path(stats)

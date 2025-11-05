@@ -4,7 +4,7 @@ process RECONSTRUCT_QURE {
     tag "$sample_id"
     container "cacciabue/multiquas:developing"
     publishDir "results/${sample_id}/haplotypes_qure/${contig_name}", mode: 'copy'    
-    
+    memory '6G'
     errorStrategy { task.attempt <3 ? 'retry' : 'ignore' }
     maxRetries 3
     input:

@@ -10,8 +10,9 @@ process MERGE_RECONSTRUCTED_QURE {
   
     output:
     tuple path("${sample_id}_qure_haplotypes.fasta"), 
-    path("${sample_id}_qure_proportions.txt"),
-    val("$sample_id")
+        val("$sample_id"),
+        path("${sample_id}_qure_proportions.txt"),
+        path("${sample_id}_qure_haplotypes_aligned.fasta")
     
     cpus 4
 
@@ -20,6 +21,8 @@ process MERGE_RECONSTRUCTED_QURE {
  
     
     cat ${haplotypes} >  ${sample_id}_qure_haplotypes.fasta
+    
+    mafft --thread ${task.cpus} --auto --quiet ${sample_id}_qure_haplotypes.fasta > ${sample_id}_qure_haplotypes_aligned.fasta
     
     cat ${adjusted} >  ${sample_id}_qure_proportions.txt
     
