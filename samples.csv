@@ -1,0 +1,3 @@
+sample_id,fastq_1,fastq_2
+231,data/reads/231_R1.fastq,data/reads/231_R2.fastq
+239,data/reads/239_R1.fastq,data/reads/239_R2.fastq

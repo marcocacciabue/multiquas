@@ -182,9 +182,9 @@ workflow {
                        EXTRACT_REFERENCE.out.first_ref,
                        VARIANTS.out)
    
-    GET_CLIQUE_S(ALIGNMENT_S.out.single_bam,
-                         EXTRACT_REFERENCE.out.first_ref,
-                         VARIANTS.out)
+   // GET_CLIQUE_S(ALIGNMENT_S.out.single_bam,
+     //                    EXTRACT_REFERENCE.out.first_ref,
+       //                  VARIANTS.out)
    
 
    
@@ -199,7 +199,7 @@ workflow {
   
   
   GET_QURE_M.out.results
-  .mix(  GET_QURE_S.out.results, GET_CLIQUE_S.out.results)
+  .mix(  GET_QURE_S.out.results)
     .collectFile(name: 'run_results.txt', 
    newLine: false,
    keepHeader:true,
@@ -228,18 +228,17 @@ workflow {
   }
   .map { sample -> [sample.sample_id, sample] }
   
-   result_clique_ch_s=GET_CLIQUE_S.out.reconstructed_data
-  .map { sample_id, haplo, proportions, graphs, r_sq -> [sample_id:sample_id,
-  haplo:haplo,
-  proportions:proportions,
-  graphs:graphs,
-  r_sq:r_sq.text.toFloat()]
-  }
-  .map { sample -> [sample.sample_id, sample] }
+ //  result_clique_ch_s=GET_CLIQUE_S.out.reconstructed_data
+//  .map { sample_id, haplo, proportions, graphs, r_sq -> [sample_id:sample_id,
+//  haplo:haplo,
+//  proportions:proportions,
+//  graphs:graphs,
+//  r_sq:r_sq.text.toFloat()]
+//  }
+  //.map { sample -> [sample.sample_id, sample] }
    
  data_ch=result_qure_ch_s
  .join(result_qure_ch_m)
- .join(result_clique_ch_s)
    .map{ 
      def getMAX = [b.r_sq,c.r_sq].max(),
      def elementMAX = (getMAX == b.r_sq) ? b : c,
