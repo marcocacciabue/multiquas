@@ -1,9 +1,10 @@
 #!/usr/bin/env nextflow
 
-process SPLIT_ALIGNMENT {
+process SPLIT_ALIGNMENT_M {
+       label 'process_low'
      tag "$sample_id"
     container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/multiple_alignment/${contig}", mode: 'copy'
+    publishDir "results/${sample_id}/aligment_m/${contig}", mode: 'copy'
 
     input:
     tuple val(contig),
@@ -26,7 +27,7 @@ process SPLIT_ALIGNMENT {
       val("${contig}"),
       val("$sample_id"), 
       path("${contig}.fasta"),
-      path("$stats"),emit: splittted_reads
+      path("$stats"),emit: splitted_reads
     cpus 4
 
     script:

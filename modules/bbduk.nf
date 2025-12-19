@@ -1,6 +1,8 @@
 #!/usr/bin/env nextflow
 
 process BBDUK {
+    label 'process_low'
+
      tag "$sample_id"
     container "cacciabue/multiquas:developing"
     publishDir "results/${sample_id}/trimming", mode: 'copy'

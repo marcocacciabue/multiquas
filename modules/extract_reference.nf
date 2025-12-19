@@ -1,18 +1,17 @@
 #!/usr/bin/env nextflow
 
 process EXTRACT_REFERENCE {
-  
+    label 'process_low'
     container "cacciabue/multiquas:developing"
-    publishDir "results/", mode: 'copy'
 
-    cpus 4
-    
     input:
 
-    path(input_ref)
-    
+    path input_ref
+
     output:
-    tuple path("first.fasta"), emit:first_ref
+    path ("first.fasta"), emit: first_ref
+    path ("${input_ref}"), emit: general_ref
+
     script:
     """
     samtools faidx ${input_ref}  

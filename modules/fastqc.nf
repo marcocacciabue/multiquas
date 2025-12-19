@@ -1,7 +1,8 @@
 #!/usr/bin/env nextflow
 
 process FASTQC {
- tag "$sampleId"
+    label 'process_low'
+    tag "${sampleId}"
     container "cacciabue/multiquas:developing"
     publishDir "results/${sample_id}/fastqc", mode: 'copy'
 

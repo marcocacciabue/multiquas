@@ -1,20 +1,19 @@
 #!/usr/bin/env nextflow
 
 process MERGE_RECONSTRUCTED_QURE {
+          label 'process_low'
+
     tag "$sample_id"
     container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/haplotypes_qure/", mode: 'copy'    
 
     input:
-    tuple path(haplotypes), path(adjusted), val(sample_id) 
+    tuple   val(sample_id), path(haplotypes), path(adjusted), val(contig_name) 
   
     output:
-    tuple path("${sample_id}_qure_haplotypes.fasta"), 
-        val("$sample_id"),
-        path("${sample_id}_qure_proportions.txt"),
-        path("${sample_id}_qure_haplotypes_aligned.fasta")
-    
-    cpus 4
+    tuple val("$sample_id"),
+          path("${sample_id}_qure_haplotypes.fasta"), 
+                path("${sample_id}_qure_proportions.txt"),
+                 val("${contig_name}")
 
     script:
     """
@@ -22,7 +21,6 @@ process MERGE_RECONSTRUCTED_QURE {
     
     cat ${haplotypes} >  ${sample_id}_qure_haplotypes.fasta
     
-    mafft --thread ${task.cpus} --auto --quiet ${sample_id}_qure_haplotypes.fasta > ${sample_id}_qure_haplotypes_aligned.fasta
     
     cat ${adjusted} >  ${sample_id}_qure_proportions.txt
     

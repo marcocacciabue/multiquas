@@ -1,9 +1,10 @@
 #!/usr/bin/env nextflow
 
-process MERGE_READS {
+process MERGE_READS_M {
+      label 'process_medium'
      tag "$sample_id"
     container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/multiple_alignment/${contig_name}", mode: 'copy'
+    publishDir "results/${sample_id}/aligment_m/${contig_name}", mode: 'copy'
 
     input:
     tuple path(s_1_fq), path(s_2_fq), path(o_fq), val(contig_name), val(sample_id), path(contig), path(stats)

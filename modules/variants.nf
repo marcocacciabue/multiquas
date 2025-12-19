@@ -3,7 +3,7 @@
 process VARIANTS {
     tag "$sample_id"
     container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/single_alignment/variants", mode: 'copy'
+    publishDir "results/${sample_id}/aligment_s/variants", mode: 'copy'
     cpus 4
     memory "2G"
     input:
@@ -19,7 +19,7 @@ process VARIANTS {
   
    
     output:
-    tuple path("${sample_id}_variants.vcf"), val("${sample_id}"), emit: variants
+    tuple val("${sample_id}"), path("${sample_id}_variants.vcf"), emit: variants
     script:
     """
      lofreq viterbi -f ${reference} -o ${sample_id}_map_viterbi.bam ${map_bam}
