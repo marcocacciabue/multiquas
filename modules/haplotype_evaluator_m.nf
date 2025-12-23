@@ -127,7 +127,7 @@ ggsave('${sample_id}_qure_graphs.png',
        height=8,
        dpi=600)
        
-out_table <- data.frame(sample_id = ${sample_id},
+out_table <- data.frame(sample_id = '${sample_id}',
                     rsquared = R_sq,
                     method = "multiple",
                     reconstructer = "QuRe")
