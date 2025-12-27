@@ -60,6 +60,7 @@ colnames(results_table) <- c("ID",seq(start,end,by=1))
 temp2 <- results_table[2,]!=results_table[1,]
 temp2 <- temp2 & (results_table[2,] != "-")
 
+if (length(results_table[,1])>2){
 for (S_N in 3:length(results_table[,1])) {
   temp <- (results_table[S_N,] != results_table[1,])
   temp <- temp & (results_table[S_N,] != "-")
@@ -73,6 +74,11 @@ for (S_N in 3:length(results_table_final[,1])) {
   temp <- (results_table_final[S_N,] != results_table_final[1,])
   temp2 <- rbind(temp2,temp)
   
+}
+}else{
+  results_table_final <- results_table[,temp2]
+  
+  temp2 <- results_table_final[2,] != results_table_final[1,]
 }
 
 snp_haplotype <- temp2*haplo_freq\$freq[row(temp2)]
