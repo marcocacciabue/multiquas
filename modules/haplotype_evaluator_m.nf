@@ -17,91 +17,112 @@ process HAPLOTYPE_EVALUATOR_M {
   """
      #!/usr/bin/Rscript
 
-
+#####    Load libraries
 suppressPackageStartupMessages(library(Biostrings))
 suppressPackageStartupMessages(library(seqinr))
 suppressPackageStartupMessages(library(VariantAnnotation))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(ggrepel))
+
+
+#####    Load helper functions
+#takes alignment and returns a dataframe with the SNPs 
+generateSnpFromAlignment <- function(alignment){
+  
+  snps <- data.frame(ID = names(alignment))
+  temp_snps <- vector()
+  start <- 1
+  end <- length(alignment[[1]])
+  for (position in start:end) {
+    for (entry in seq_along(alignment)) {
+      temp_snps[entry]<-alignment[[entry]][position]
+    }
+    snps <- cbind(snps,temp_snps)
+  }
+  
+  colnames(snps) <- c("ID",seq(start,end,by=1))
+  
+  #get positions with changes between reference and 
+  #first sequence entry. Discard gaps.
+  keepPosition <- (snps[2,]!=snps[1,]) & (snps[2,] != "-")
+  
+  #repeat process for the rest of the sequence entries (if more than one).
+  if (length(snps[,1])>2){
+    for (S_N in 3:length(snps[,1])) {
+      keepTemp <- (snps[S_N,] != snps[1,]) & (snps[S_N,] != "-")
+      keepPosition <- keepPosition | keepTemp
+    }
+  }  
+  #if none of the positions meets the criteria
+  #a dummy position is selected (first).
+  #TODO: create a more elegant solution.
+  if(sum(keepPosition)==1){
+    
+    snpsSelected <- snps[,1:2]
+    
+  }else{
+    snpsSelected <- snps[,keepPosition]
+  }
+  
+  keepPositionAll <- snpsSelected[2,] != snpsSelected[1,]
+  
+  #get from the dataframe only if difference from reference is met
+  
+  for (S_N in 3:length(snpsSelected[,1])) {
+    temp <- (snpsSelected[S_N,] != snpsSelected[1,])
+    keepPositionAll <- rbind(keepPositionAll,temp)
+  }
+  
+  return(list(snps=snpsSelected,
+              snpsLogical=keepPositionAll))
+}
+
+getComparisonData <- function(snpsSelected,
+                              haplo_freq,
+                              vcf){
+  snp_haplotype <- snpsSelected\$snpsLogical*haplo_freq\$freq[row(snpsSelected\$snpsLogical)]
+  snp_haplotype <- colSums(snp_haplotype)/100
+  
+  #remove reference
+  snp_haplotype <- snp_haplotype[-1]
+  
+  haplotype_position <- as.numeric(names(snp_haplotype))
+  
+  haplotype_freq <- as.vector(snp_haplotype)*100
+  Lofreq_freq <- (vcf@info\$AF)*100
+  lofreq_position <- start(ranges(vcf))
+  
+  # combine position vectors, remove duplicates and sort
+  Position <- (c(haplotype_position,lofreq_position))
+  Position <- unique(Position)
+  Position <- Position[order(Position)]
+  
+  #keep only position present in both dataset.
+  Haplo <- match(Position,haplotype_position)
+  Lofreq <- match(Position,lofreq_position)
+  
+  data <- data.frame(position = Position,
+                     lofreq = Lofreq_freq[Lofreq],
+                     haplo = haplotype_freq[Haplo])
+  
+  
+  data[is.na(data)] <- 0
+  return(data)
+}
 # FIRST sequence is consider as the reference!!
 
 haplo_freq <- read.table('${proportions}')
 names(haplo_freq) <- "freq"
-query_alineado <- read.fasta('${sample_id}_qure_haplotypes_aligned.fasta',
+alignment <- read.fasta('${sample_id}_qure_haplotypes_aligned.fasta',
                              seqtype = "DNA")
 vcf <- readVcf('${variants_vcf}')
+snpsSelected <- generateSnpFromAlignment(alignment)
+data<-getComparisonData(snpsSelected,
+                  haplo_freq,
+                  vcf)
 
-results_table <- data.frame(ID = names(query_alineado))
-temp_aa <- vector()
-
-
-start <- 1
-
-end <- length(query_alineado[[1]])
-for (i in start:end) {
-  for (h in seq_along(query_alineado)) {
-    temp_aa[h]<-query_alineado[[h]][i]
-  }
-  results_table <- cbind(results_table,temp_aa)
-}
-colnames(results_table) <- c("ID",seq(start,end,by=1))
-
-temp2 <- results_table[2,]!=results_table[1,]
-temp2 <- temp2 & (results_table[2,] != "-")
-
-if (length(results_table[,1])>2){
-for (S_N in 3:length(results_table[,1])) {
-  temp <- (results_table[S_N,] != results_table[1,])
-  temp <- temp & (results_table[S_N,] != "-")
-  temp2 <- temp2 | temp
-}
-
-results_table_final <- results_table[,temp2]
-
-temp2 <- results_table_final[2,] != results_table_final[1,]
-for (S_N in 3:length(results_table_final[,1])) {
-  temp <- (results_table_final[S_N,] != results_table_final[1,])
-  temp2 <- rbind(temp2,temp)
-  
-}
-}else{
-  results_table_final <- results_table[,temp2]
-  
-  temp2 <- results_table_final[2,] != results_table_final[1,]
-}
-snp_haplotype <- temp2*haplo_freq\$freq[row(temp2)]
-
-snp_haplotype <- colSums(snp_haplotype)/100
-
-snp_haplotype <- snp_haplotype[-1]
-
-haplotype_position <- as.numeric(names(snp_haplotype))
-
-haplotype_freq <- as.vector(snp_haplotype)*100
-Lofreq_freq <- (vcf@info\$AF)*100
-lofreq_position <- start(ranges(vcf))
-
-# combino vectores de posicion
-Position <- (c(haplotype_position,lofreq_position))
-
-#  saco duplicados que exceden
-
-Position <- unique(Position)
-# ordeno de menor a mayor
-Position <- Position[order(Position)]
-
-Haplo <- match(Position,haplotype_position)
-Lofreq <- match(Position,lofreq_position)
-
-data <- data.frame(position = Position,
-lofreq = Lofreq_freq[Lofreq],
-haplo = haplotype_freq[Haplo])
-
-
-data[is.na(data)] <- 0
 model <- lm(haplo ~ lofreq,
             data = data)
-summary(model)
 
 R_sq <- round(summary(model)\$r.squared,3)
 
@@ -131,21 +152,21 @@ ggsave('${sample_id}_qure_graphs.png',
        width=10, 
        height=8,
        dpi=600)
-       
+
 out_table <- data.frame(sample_id = '${sample_id}',
-                    rsquared = R_sq,
-                    method = "multiple",
-                    reconstructer = "QuRe")
-                    
+                        rsquared = R_sq,
+                        method = "multiple",
+                        reconstructer = "QuRe")
+
 write.table(out_table,
-'${sample_id}_multiple_qure_results.txt', 
-sep=",",
-row.names=FALSE)
+            '${sample_id}_multiple_qure_results.txt', 
+            sep=",",
+            row.names=FALSE)
 
 write.table(R_sq,
-'${sample_id}_R_sq.txt', 
-sep=",",
-col.names=FALSE,
-row.names=FALSE)
+            '${sample_id}_R_sq.txt', 
+            sep=",",
+            col.names=FALSE,
+            row.names=FALSE)
 """
 }
