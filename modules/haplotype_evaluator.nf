@@ -17,16 +17,14 @@ process HAPLOTYPE_EVALUATOR {
   
   output:
     tuple val("${sample_id}"),
-           val("${reconstructer}"),
-           val("${method}"),
-           path("${haplotypes}"),
-           path("${proportions}"),
-           path("${sample_id}_${reconstructer}_${method}_graphs.png"),
-           path("${sample_id}_${reconstructer}_${method}_R_sq.txt"),emit:reconstructed_data
-           path("${sample_id}_${reconstructer}_${method}_results.txt"),emit:results
+          val("${reconstructer}"),
+          val("${method}"),
+          path("${haplotypes}"),
+          path("${proportions}"),
+          path("${sample_id}_${reconstructer}_${method}_graphs.png"),
+          path("${sample_id}_${reconstructer}_${method}_R_sq.txt"),emit:reconstructed_data
+          path("${sample_id}_${reconstructer}_${method}_results.txt"),emit:results
 
-
- 
   script:
     """
      #!/usr/bin/Rscript

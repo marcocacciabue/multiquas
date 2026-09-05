@@ -22,7 +22,6 @@ process MERGE_READS {
           
   
   output:
-    
     tuple val("$sample_id"), 
           path("$first_ref"),
           path("$general_ref"),

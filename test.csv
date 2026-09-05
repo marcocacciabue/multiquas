@@ -1,0 +1,2 @@
+﻿sample_id,fastq_1,fastq_2,input_ref
+C,data/reads/C_R1.fastq,data/reads/C_R2.fastq,data/reference/A01L_and_A01NL.fasta

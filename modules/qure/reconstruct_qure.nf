@@ -36,7 +36,7 @@ process RECONSTRUCT_QURE {
     """
     #TODO add step to check if reads are enough.
    if [[ ${task.attempt} -eq 1 ]]; then
-        seqtk sample -s 11 ${reads} 0.99 >  temporary.fasta
+      seqtk sample -s 11 ${reads} 0.99 >  temporary.fasta
    fi
  
    if [[ ${task.attempt} -eq 2 ]]; then
@@ -53,11 +53,11 @@ process RECONSTRUCT_QURE {
  
     """
     stub: 
-            def memory = "${task.memory}".replaceAll("\\s","").replaceAll("B","")
+         def memory = "${task.memory}".replaceAll("\\s","").replaceAll("B","")
 
     """
    
-      seqtk sample -s 11 ${reads} 0.1 >  temporary.fasta
+     seqtk sample -s 11 ${reads} 0.1 >  temporary.fasta
    
      java -Xmx${memory} -cp /programs/QuRe_v0.99971/ QuRe   temporary.fasta ${reference} 1E-25 0.00035 10
      mv temporary_reconstructedVariants.txt ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants.fasta

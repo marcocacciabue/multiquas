@@ -2,9 +2,8 @@
 
 process ALIGNMENT_M {
     label 'process_medium'
-
     container "cacciabue/multiquas:tools.v0.0.1"
-        tag "${sample_id}"
+    tag "${sample_id}"
     containerOptions "--cpus=${task.cpus}"
     input:
     tuple val(sample_id), 

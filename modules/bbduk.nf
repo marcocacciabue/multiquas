@@ -2,8 +2,7 @@
 
 process BBDUK {
     label 'process_low'
-        tag "${sample_id}"
-
+    tag "${sample_id}"
     container "cacciabue/multiquas:tools.v0.0.1"
     memory "4G"
     input:
@@ -14,11 +13,11 @@ process BBDUK {
 
     output:
   
-    tuple  val("${sample_id}"),
-           path("${read1.simpleName}_trimmed.fq"), 
-           path("${read2.simpleName}_trimmed.fq"), 
-           path("first.fasta"), 
-           path("general_ref.fasta"),emit: trimmed_reads
+    tuple val("${sample_id}"),
+          path("${read1.simpleName}_trimmed.fq"), 
+          path("${read2.simpleName}_trimmed.fq"), 
+          path("first.fasta"), 
+          path("general_ref.fasta"),emit: trimmed_reads
  
 
     script:

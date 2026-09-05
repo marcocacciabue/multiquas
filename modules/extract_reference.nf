@@ -10,8 +10,8 @@ process EXTRACT_REFERENCE {
     path input_ref
 
     output:
-    path ("first.fasta"), emit: first_ref
-    path ("general_ref.fasta"), emit: general_ref
+    path("first.fasta"), emit: first_ref
+    path("general_ref.fasta"), emit: general_ref
 
     script:
     """

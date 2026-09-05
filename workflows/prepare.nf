@@ -1,5 +1,5 @@
-include { BBDUK                                            } from '../modules/bbduk.nf'
-include { EXTRACT_REFERENCE                                } from '../modules/extract_reference.nf'
+include { BBDUK             } from '../modules/bbduk.nf'
+include { EXTRACT_REFERENCE } from '../modules/extract_reference.nf'
 
 workflow PREPARE {
 
@@ -10,17 +10,17 @@ workflow PREPARE {
   // Create input channel from the contents of a CSV file
   read_ch = Channel.fromPath(input_csv)
   .splitCsv(header:true)
-  .map { row -> [row.sample_id, file(row.fastq_1), file(row.fastq_2), file(row.input_ref)]}
+  .map { row -> [row.sample_id, 
+                file(row.fastq_1), 
+                file(row.fastq_2), 
+                file(row.input_ref)]}
   
   
   // Adapter trimming and post-trimming QC
   BBDUK(read_ch)
-  
 
-
-  
   emit:
-  reads=BBDUK.out.trimmed_reads
+  reads = BBDUK.out.trimmed_reads
 
 
 }

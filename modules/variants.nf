@@ -31,7 +31,7 @@ process VARIANTS {
     """
      lofreq viterbi -f ${first_ref} -o ${sample_id}_map_viterbi.bam ${map_bam}
      samtools sort  -@ ${task.cpus} ${sample_id}_map_viterbi.bam > ${sample_id}_map_viterbi_sorted.bam
-  samtools index -@ ${task.cpus} ${sample_id}_map_viterbi_sorted.bam ${sample_id}_map_viterbi_sorted.bai
-  lofreq call-parallel --pp-threads ${task.cpus} --use-orphan  -f ${first_ref} ${sample_id}_map_viterbi_sorted.bam -o ${sample_id}_variants.vcf
+     samtools index -@ ${task.cpus} ${sample_id}_map_viterbi_sorted.bam ${sample_id}_map_viterbi_sorted.bai
+     lofreq call-parallel --pp-threads ${task.cpus} --use-orphan  -f ${first_ref} ${sample_id}_map_viterbi_sorted.bam -o ${sample_id}_variants.vcf
     """
 }
