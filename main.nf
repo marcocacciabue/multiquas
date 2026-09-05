@@ -43,7 +43,7 @@ def Logo() {
 
 // Primary input
 params.input_csv = "samples.csv"
-params.input_ref = "data/referencia/referencia.fasta"
+
 
 // Reconstructer selection. Clique_s is always ON.
 params.qure_s    = "ON"
