@@ -39,7 +39,7 @@ process RECONSTRUCT_SAVAGE {
     
     
     """
-     #only considers paired reads
+    #only considers paired reads
     reads=\$(seqtk size $s1_fq | cut -f1)
     frac=\$(echo "scale=0; (2*\$reads/750)" | bc)
     

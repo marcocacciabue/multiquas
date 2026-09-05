@@ -32,13 +32,15 @@ process FILTER_HAPLOTYPES_BY_LENGTH {
   
   script:
     """
-    # TODO add check to see if larger than expected size sequences are found or not.
-       seqkit seq  --min-len 100 ${reconstructedVariants} > ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants_filtered.fasta
-
+    seqkit seq --min-len 100 ${reconstructedVariants} > ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants_filtered.fasta
     
     
+    # check if at least one haplotype is left after filtering step.
+    haplotypes=\$(seqtk size ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants_filtered.fasta | cut -f1)
     
-    
-
+    if [[ \$haplotypes -lt 1 ]]; then
+      echo "No haplotypes passed the size filtering step"
+      break
+    fi
     """
 }
