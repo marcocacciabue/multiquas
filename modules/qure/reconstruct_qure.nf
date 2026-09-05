@@ -47,7 +47,9 @@ process RECONSTRUCT_QURE {
       seqtk sample -s 11 ${reads} 0.1 >  temporary.fasta
    fi
    java -Xmx${memory} -cp /programs/QuRe_v0.99971/ QuRe   temporary.fasta ${reference} 1E-25 0.00035 10
-   mv ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants.fasta
+   mv temporary_reconstructedVariants.txt ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants.fasta
+   cp $stats ${sample_id}_${reconstructer}_${method}_${contig_name}_stats_dummy.txt
+
  
     """
     stub: 
@@ -58,8 +60,8 @@ process RECONSTRUCT_QURE {
       seqtk sample -s 11 ${reads} 0.1 >  temporary.fasta
    
      java -Xmx${memory} -cp /programs/QuRe_v0.99971/ QuRe   temporary.fasta ${reference} 1E-25 0.00035 10
-  mv temporary_reconstructedVariants.txt ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants.fasta
- cp $stats ${sample_id}_${reconstructer}_${method}_${contig_name}_stats_dummy.txt
+     mv temporary_reconstructedVariants.txt ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants.fasta
+     cp $stats ${sample_id}_${reconstructer}_${method}_${contig_name}_stats_dummy.txt
 
 """
 }
