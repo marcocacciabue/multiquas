@@ -23,7 +23,6 @@ def Logo() {
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                      #############################################
                      samplesheet:        ${params.input_csv}
-                     reference:          ${params.input_ref}
                      qure single:        ${params.qure_s}  
                      qure multiple:      ${params.qure_m}
                      clique single:      ON
