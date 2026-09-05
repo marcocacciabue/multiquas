@@ -1,10 +1,9 @@
-include { GET_READS          } from '../modules/get_reads.nf'
-include { MERGE_READS              } from '../modules/merge_reads.nf'
-include { RECONSTRUCT_QURE         } from '../modules/reconstruct_qure.nf'
-include { MERGE_RECONSTRUCTED_QURE } from '../modules/merge_reconstructed_qure.nf'
-include { ADJUST_HAPLOTYPE_FREQ    } from '../modules/adjust_haplotype_freq.nf'
-include { ALIGN_HAPLOTYPES         } from '../modules/align_haplotypes.nf'
-include { HAPLOTYPE_EVALUATOR      } from '../modules/haplotype_evaluator.nf'
+include { GET_READS             } from '../modules/get_reads.nf'
+include { MERGE_READS           } from '../modules/merge_reads.nf'
+include { RECONSTRUCT_QURE      } from '../modules/qure/reconstruct_qure.nf'
+include { ADJUST_HAPLOTYPE_FREQ } from '../modules/adjust_haplotype_freq.nf'
+include { ALIGN_HAPLOTYPES      } from '../modules/align_haplotypes.nf'
+include { HAPLOTYPE_EVALUATOR   } from '../modules/haplotype_evaluator.nf'
 
 
 workflow GET_QURE_S {
