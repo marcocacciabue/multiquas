@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-params.version = v0.0.1
+params.version = "v0.0.1"
 
 def Logo() {
     log.info"""
