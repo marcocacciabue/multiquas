@@ -2,25 +2,29 @@
 
 process ALIGNMENT_S {
     label 'process_medium'
-    tag "$sample_id"
-    container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/aligment_s", mode: 'copy'
-    cpus 4
-    memory "2G"
+    container "cacciabue/multiquas:tools.v0.0.1"
+        tag "${sample_id}"
+    containerOptions "--cpus=${task.cpus}"
     input:
-    tuple val(sample_id), path(read1), path(read2),  path(first_ref)
+    tuple val(sample_id), 
+          path(read1), 
+          path(read2),  
+          path(first_ref),
+          path(general_ref)
    
     output:
-    tuple  path("sorted.bam"),
-    path("sorted.bai"),
-    path("map.bam"),
-    path("map.bai"),
-    path("stats.txt"), 
-    path("number_reads.txt"), 
-    path("first_index.tar.gz"),
-    path("${first_ref}"),
-    val("$sample_id"), emit: single_bam
-
+    tuple  val("$sample_id"),
+           path("${first_ref}"),
+           path("$general_ref"),
+           path("sorted.bam"),
+           path("sorted.bai"),
+           path("map.bam"),
+           path("map.bai"),
+           path("stats.txt"), 
+           path("number_reads.txt"), 
+           path("${first_ref.simpleName}_index.tar.gz"), emit: single_bam
+     tuple val("$sample_id"),     
+           path("references_list.txt"),emit: reference_list
     script:
     """
 
@@ -39,6 +43,6 @@ process ALIGNMENT_S {
    #generate list of references in bam file
 
     samtools view -H map.bam | grep -P '^@SQ' | cut -f 2 -d ':' | cut -f 1 > references_list.txt
-    echo "unmapped" >> references_list.txt
+
     """
 }

@@ -1,28 +1,41 @@
 #!/usr/bin/env nextflow
 
-process HAPLOTYPE_EVALUATOR_M {
+process HAPLOTYPE_EVALUATOR {
   label 'process_low'
-  tag "${sample_id}"
-  container "cacciabue/multiquas:developing"
-  publishDir "results/${sample_id}/haplotypes_qure/evaluator_multiple", mode: 'copy'
+ 
+  container "cacciabue/multiquas:vortex.v0.0.1"
+    tag "${sample_id}"
 
   input:
-  tuple val(sample_id), path(haplotypes), path(proportions), path(variants_vcf), val(contig_name)
-
+    tuple val(sample_id), 
+          val(reconstructer),
+          val(method),
+          path(haplotypes),
+          path(proportions), 
+          path(variants_vcf),
+          val(contig_name)
+  
   output:
-  tuple val("${sample_id}"), path("${sample_id}_qure_haplotypes_aligned.fasta"), path("${proportions}"), path("${sample_id}_qure_graphs.png"), path("${sample_id}_R_sq.txt"), emit: reconstructed_data
-  path ("${sample_id}_multiple_qure_results.txt"), emit: results
+    tuple val("${sample_id}"),
+           val("${reconstructer}"),
+           val("${method}"),
+           path("${haplotypes}"),
+           path("${proportions}"),
+           path("${sample_id}_${reconstructer}_${method}_graphs.png"),
+           path("${sample_id}_${reconstructer}_${method}_R_sq.txt"),emit:reconstructed_data
+           path("${sample_id}_${reconstructer}_${method}_results.txt"),emit:results
 
+
+ 
   script:
-  """
+    """
      #!/usr/bin/Rscript
-
-#####    Load libraries
 suppressPackageStartupMessages(library(Biostrings))
 suppressPackageStartupMessages(library(seqinr))
 suppressPackageStartupMessages(library(VariantAnnotation))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(ggrepel))
+suppressPackageStartupMessages(library(voRtex))
 
 
 #####    Load helper functions
@@ -55,7 +68,6 @@ generateSnpFromAlignment <- function(alignment){
   }  
   #if none of the positions meets the criteria
   #a dummy position is selected (first).
-  #TODO: create a more elegant solution.
   if(sum(keepPosition)==1){
     
     snpsSelected <- snps[,1:2]
@@ -113,19 +125,30 @@ getComparisonData <- function(snpsSelected,
 
 haplo_freq <- read.table('${proportions}')
 names(haplo_freq) <- "freq"
-alignment <- read.fasta('${sample_id}_qure_haplotypes_aligned.fasta',
-                             seqtype = "DNA")
+
 vcf <- readVcf('${variants_vcf}')
+                          
+DNA_stringset<-Biostrings::readDNAStringSet("haplotypes_aligned.fasta")
+Vcf_calibrated<-recalibrate_vcf(vcf,
+                DNA_stringset[1])
+
+alignment <- read.fasta('${haplotypes}',
+                             seqtype = "DNA")
+
 snpsSelected <- generateSnpFromAlignment(alignment)
 data<-getComparisonData(snpsSelected,
                   haplo_freq,
-                  vcf)
+                  Vcf_calibrated)
 
 model <- lm(haplo ~ lofreq,
             data = data)
 
 R_sq <- round(summary(model)\$r.squared,3)
 
+#handle cases when only one haplotype is present or no Rsquared is computed.
+if(is.na(R_sq)){
+R_sq <- 0
+}
 
 eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2,
                  list(        a = format(unname(coef(model))[1], digits = 4),
@@ -146,27 +169,29 @@ p<-ggplot(data,aes(x=lofreq,
   theme(axis.title=element_text(size=14))+
   geom_text(mapping = aes(x=x, y=y, label = eq), size=7, data = dftext, parse = TRUE)
 
-ggsave('${sample_id}_qure_graphs.png',
+ggsave('${sample_id}_${reconstructer}_${method}_graphs.png',
        p,
        units="in", 
        width=10, 
        height=8,
        dpi=600)
-
+       
 out_table <- data.frame(sample_id = '${sample_id}',
-                        rsquared = R_sq,
-                        method = "multiple",
-                        reconstructer = "QuRe")
+                    rsquared = R_sq,
+                    reconstructer = '${reconstructer}')
+                    
+
 
 write.table(out_table,
-            '${sample_id}_multiple_qure_results.txt', 
-            sep=",",
-            row.names=FALSE)
+'${sample_id}_${reconstructer}_${method}_results.txt', 
+sep=",",
+row.names=FALSE)
 
 write.table(R_sq,
-            '${sample_id}_R_sq.txt', 
-            sep=",",
-            col.names=FALSE,
-            row.names=FALSE)
+'${sample_id}_${reconstructer}_${method}_R_sq.txt', 
+sep=",",
+col.names=FALSE,
+row.names=FALSE)
+
 """
 }

@@ -3,30 +3,36 @@
 process ALIGNMENT_M {
     label 'process_medium'
 
-    tag "$sample_id"
-    container "cacciabue/multiquas:developing"
-    publishDir "results/${sample_id}/aligment_m", mode: 'copy'
-    cpus 4
-    memory "2G"
+    container "cacciabue/multiquas:tools.v0.0.1"
+        tag "${sample_id}"
+    containerOptions "--cpus=${task.cpus}"
     input:
-    tuple val(sample_id), path(read1), path(read2),  path(input_ref)
+    tuple val(sample_id), 
+          path(read1), 
+          path(read2),  
+          path(first_ref),
+          path(general_ref)
    
     output:
-    tuple  path("sorted.bam"),
-    path("sorted.bai"),
-    path("map.bam"),
-    path("map.bai"),
-    path("stats.txt"), 
-    path("number_reads.txt"), 
-    path("${input_ref.simpleName}_index.tar.gz"),
-    path("$input_ref"),
-    val("$sample_id"), emit: multiple_bam
-    path("references_list.txt"),emit: reference_list
+    tuple val("$sample_id"),
+          path("${first_ref}"),
+          path("$general_ref"),
+          path("sorted.bam"),
+          path("sorted.bai"),
+          path("map.bam"),
+          path("map.bai"),
+          path("stats.txt"), 
+          path("number_reads.txt"), 
+          path("${general_ref.simpleName}_index.tar.gz"), emit: multiple_bam
+    tuple val("$sample_id"),     
+          path("references_list.txt"),emit: reference_list
     script:
     """
-    bowtie2-build $input_ref ref
+    bowtie2-build $general_ref ref
   
-    bowtie2 --no-discordant --no-mixed -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $input_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
+    bowtie2 --no-discordant --no-mixed -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
+    #bowtie2 -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
+
     samtools index -@ ${task.cpus} sorted.bam sorted.bai
     samtools idxstats sorted.bam > stats.txt
     samtools view -c sorted.bam > number_reads.txt
@@ -34,7 +40,7 @@ process ALIGNMENT_M {
     samtools index -@ ${task.cpus} map.bam map.bai
     
     
-    tar -czf '${input_ref.simpleName}_index.tar.gz' *.bt2 
+    tar -czf '${general_ref.simpleName}_index.tar.gz' *.bt2 
 
    #generate list of references in bam file
 

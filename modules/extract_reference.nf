@@ -2,7 +2,8 @@
 
 process EXTRACT_REFERENCE {
     label 'process_low'
-    container "cacciabue/multiquas:developing"
+    container "cacciabue/multiquas:tools.v0.0.1"
+
 
     input:
 
@@ -10,15 +11,16 @@ process EXTRACT_REFERENCE {
 
     output:
     path ("first.fasta"), emit: first_ref
-    path ("${input_ref}"), emit: general_ref
+    path ("general_ref.fasta"), emit: general_ref
 
     script:
     """
-    samtools faidx ${input_ref}  
+    cp ${input_ref} general_ref.fasta
+    samtools faidx general_ref.fasta  
     
-    sed -n '1p' *.fasta.fai | cut -f 1 > seq_names.txt
+    sed -n '1p' general_ref.fasta.fai | cut -f 1 > seq_names.txt
     
-    seqtk subseq ${input_ref} seq_names.txt > first.fasta
+    seqtk subseq  general_ref.fasta seq_names.txt > first.fasta
     
  
     """
