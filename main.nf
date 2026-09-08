@@ -23,12 +23,12 @@ def Logo() {
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                      #############################################
                      samplesheet:        ${params.input_csv}
-                     qure single:        ${params.qure_s}  
-                     qure multiple:      ${params.qure_m}
                      clique single:      ON
                      clique multiple:    ${params.clique_m} 
                      haploflow single:   ${params.haploflow_s} 
                      haploflow multiple: ${params.haploflow_m} 
+                     qure single:        ${params.qure_s}  
+                     qure multiple:      ${params.qure_m}
                      savage single:      ${params.savage_s} 
                      savage multiple:    ${params.savage_m} 
                      viquas single:      ${params.viquas_s} 
@@ -42,22 +42,20 @@ def Logo() {
 
 // Primary input
 params.input_csv = "samples.csv"
+    // Reconstructer selection. Clique_s is always ON. Default are clique, haploflow and qure.
 
-
-// Reconstructer selection. Clique_s is always ON.
-params.qure_s    = "ON"
-params.qure_m    = "ON"
-params.clique_m  = "ON"
-params.haploflow_s = "ON"
-params.haploflow_m = "ON"
-params.savage_s    = "ON"
-params.savage_m    = "ON"
-params.viquas_s    = "ON"
-params.viquas_m    = "ON"
-
-
+  params.clique_m    = "ON"
+  params.haploflow_s = "ON"
+  params.haploflow_m = "ON"
+  params.qure_s      = "ON"
+  params.qure_m      = "ON"
+  params.savage_s    = "OFF"
+  params.savage_m    = "OFF"
+  params.viquas_s    = "OFF"
+  params.viquas_m    = "OFF"
 // Create summary?
 params.summary   = "ON"
+
 
 // Workflows INCLUDE statements
 
@@ -72,6 +70,7 @@ include { RECONSTRUCT } from './workflows/reconstruct.nf'
 workflow {
   main:
   Logo()
+  
   CHECK()
   PREPARE()
   //TODO include specific commands from parameters file to the reconstruction programs
