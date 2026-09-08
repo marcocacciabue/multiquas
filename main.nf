@@ -23,7 +23,7 @@ def Logo() {
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                      #############################################
                      samplesheet:        ${params.input_csv}
-                     clique single:      ON
+                     clique single:      ${params.clique_s} 
                      clique multiple:    ${params.clique_m} 
                      haploflow single:   ${params.haploflow_s} 
                      haploflow multiple: ${params.haploflow_m} 
@@ -42,9 +42,9 @@ def Logo() {
 
 // Primary input
 params.input_csv = "samples.csv"
-    // Reconstructer selection. Clique_s is always ON. Default are clique, haploflow and qure.
-
-  params.clique_m    = "ON"
+    // Reconstructer selection. Defaults are clique, haploflow and qure.
+    params.clique_s    = "ON"
+    params.clique_m    = "ON"
   params.haploflow_s = "ON"
   params.haploflow_m = "ON"
   params.qure_s      = "ON"

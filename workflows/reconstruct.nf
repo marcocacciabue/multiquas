@@ -18,11 +18,16 @@ workflow RECONSTRUCT {
 
   
   main:
+    reconstruction_ch=Channel.empty()
+    reconstruction_ch_summary=Channel.empty()
+    if (params.clique_s == "ON"){
     GET_CLIQUE_S(single_bam,
                  variants)
-    reconstruction_ch=GET_CLIQUE_S.out.reconstructed_data
-    reconstruction_ch_summary= GET_CLIQUE_S.out.results
-    
+    reconstruction_ch=reconstruction_ch
+    .mix(GET_CLIQUE_S.out.reconstructed_data)
+    reconstruction_ch_summary=reconstruction_ch_summary
+    .mix(GET_CLIQUE_S.out.results)
+    }
          if (params.viquas_s == "ON"){
     GET_VIQUAS_S(single_bam,
                variants)
