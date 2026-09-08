@@ -53,3 +53,4 @@ results/
 .nextflow*
 .nextflow/*
 *.html
+.~lock.test.csv\#
