@@ -8,19 +8,27 @@ Requires [nextflow](https://www.nextflow.io) and [docker](https://docs.docker.co
 
 ## No time to waste
 If you just want to see the tool in action run the following:
-```bash
 
-nextflow run marcocacciabue/multiquas -latest --profile fast --input_csv data/test.csv 
+```bash
+# clone (or manually download and unpack if git is not installed) the repo like this:
+
+git clone https://github.com/marcocacciabue/multiquas.git
+
+# go to the directory
+
+cd multiquas
+# run the pipeline with a test dataset.
+nextflow run main.nf --profile fast --input_csv test.csv 
 
 ```
-This will clone this repo and all the docker images needed and then run the pipeline on a test sample (could
+This will download all the docker images needed and then run the pipeline on a test sample (could
 take some time, only the first time around). 
 If you wish to run a specific version of nextflow you can use the on the fly variable. For example
 to run nextflow version 25.10.7:
 
 ```bash
 
-NXF_VER=25.10.7 nextflow run marcocacciabue/multiquas -latest --profile fast --input_csv data/test.csv 
+NXF_VER=25.10.7 nextflow run main.nf --profile fast --input_csv test.csv 
 
 ```
 
