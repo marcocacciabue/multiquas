@@ -41,20 +41,22 @@ def Logo() {
 
 
 // Primary input
-params.input_csv = "samples.csv"
-    // Reconstructer selection. Defaults are clique, haploflow and qure.
-    params.clique_s    = "ON"
-    params.clique_m    = "ON"
-  params.haploflow_s = "ON"
-  params.haploflow_m = "ON"
-  params.qure_s      = "ON"
-  params.qure_m      = "ON"
-  params.savage_s    = "OFF"
-  params.savage_m    = "OFF"
-  params.viquas_s    = "OFF"
-  params.viquas_m    = "OFF"
+params.input_csv    = "samples.csv"
+
+// Reconstructer selection. Defaults are clique, haploflow and qure.
+params.clique_s     = "ON"
+params.clique_m     = "ON"
+params.haploflow_s  = "ON"
+params.haploflow_m  = "ON"
+params.qure_s       = "ON"
+params.qure_m       = "ON"
+params.savage_s     = "OFF"
+params.savage_m     = "OFF"
+params.viquas_s     = "OFF"
+params.viquas_m     = "OFF"
+
 // Create summary?
-params.summary   = "ON"
+params.summary      = "ON"
 
 
 // Workflows INCLUDE statements
