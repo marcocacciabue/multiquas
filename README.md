@@ -51,7 +51,7 @@ nextflow run marcocacciabue/multiquas --profile fast --input_csv samples.csv
 Multiquas runs differents reconstructions softwares (Clique, Qure, Viquas, Haploflow, Savage) and with two modes, single  and multiple (using all references). The profiles option is an easy way to define how to run the pipeline. 
 ```bash
 # profile complete will run ALL the reconstructions algorithms for each sample. Most accurate option but it may take
-same time.
+#same time.
 nextflow run marcocacciabue/multiquas --profile complete --input_csv samples.csv
 
 # profile single will run ALL the reconstrucctions algorithms but only in single mode.
@@ -68,7 +68,7 @@ nextflow run marcocacciabue/multiquas --input_csv samples.csv
 
 
 ```
-Users can override this behaviour and set on or off specific algorithm. For example: the following adds the Viquas multiple step to the default behaivour
+Users can override this behavior and set on or off specific algorithm. For example: the following adds the Viquas multiple step to the default behaivour
 ```bash
 
 nextflow run marcocacciabue/multiquas --input_csv samples.csv --viquas_m ON
