@@ -32,3 +32,19 @@ NXF_VER=25.10.7 nextflow run main.nf --profile fast --input_csv test.csv
 
 ```
 
+## I have my samples, how do I run the pipeline on them?
+
+You need to have the following in the working directory: 
+- a reference file (fasta). 
+- sample reads files (fastq).
+- a cvs file with four columns (sample_id,fastq_1,fastq_2,input_ref).
+
+Each line in the cvs file is a different sample of name sample_id. fastq_1 and fastq_2
+are the paths for the corresponding reads. input_ref is the reference to use (can be different
+between samples).
+
+
+
+
+
+
