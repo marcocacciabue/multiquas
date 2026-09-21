@@ -18,7 +18,7 @@ git clone https://github.com/marcocacciabue/multiquas.git
 
 cd multiquas
 # run the pipeline with a test dataset.
-nextflow run main.nf --profile fast --input_csv test.csv 
+nextflow run main.nf -resume -profile fast --input_csv test.csv 
 
 ```
 This will download all the docker images needed and then run the pipeline on a test sample (could
@@ -28,7 +28,7 @@ to run nextflow version 25.10.7:
 
 ```bash
 
-NXF_VER=25.10.7 nextflow run main.nf --profile fast --input_csv test.csv 
+NXF_VER=25.10.7 nextflow run main.nf -resume -profile fast --input_csv test.csv 
 
 ```
 
@@ -44,7 +44,7 @@ are the relative paths for the corresponding reads. input_ref is the reference t
 between samples). See [test.csv](https://github.com/marcocacciabue/multiquas/blob/7dbce91bae963665a2db907a9f699dc1e8de66c0/test.csv) for an example.
 If your sample files is called "samples.csv", you can then run:
 ```bash
-nextflow run marcocacciabue/multiquas --profile fast --input_csv samples.csv 
+nextflow run marcocacciabue/multiquas -resume -profile fast --input_csv samples.csv 
 
 ```
 Note: this command is different in the way that it will clone the repo directly to a nextflow folder for you. It is the same 
@@ -53,26 +53,26 @@ Multiquas runs differents reconstructions softwares (Clique, Qure, Viquas, Haplo
 ```bash
 # profile complete will run ALL the reconstructions algorithms for each sample. Most accurate option but it may take
 #same time.
-nextflow run marcocacciabue/multiquas --profile complete --input_csv samples.csv
+nextflow run marcocacciabue/multiquas -resume -profile complete --input_csv samples.csv
 
 # profile single will run ALL the reconstrucctions algorithms but only in single mode.
-nextflow run marcocacciabue/multiquas --profile single --input_csv samples.csv
+nextflow run marcocacciabue/multiquas -resume -profile single --input_csv samples.csv
 
 # profile multiple will run ALL the reconstrucctions algorithms but only in multiple mode.
-nextflow run marcocacciabue/multiquas --profile multiple --input_csv samples.csv
+nextflow run marcocacciabue/multiquas -resume -profile multiple --input_csv samples.csv
 
 # profile fast will run only the Clique algorithm.
-nextflow run marcocacciabue/multiquas --profile multiple --input_csv samples.csv
+nextflow run marcocacciabue/multiquas -resume -profile multiple --input_csv samples.csv
 
 # if no profile is selected Clique, Qure and Haploflow will be used.
-nextflow run marcocacciabue/multiquas --input_csv samples.csv
+nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv
 
 
 ```
 Users can override this behavior and set on or off specific algorithm. For example: the following adds the Viquas multiple step to the default behaivour
 ```bash
 
-nextflow run marcocacciabue/multiquas --input_csv samples.csv --viquas_m ON
+nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv --viquas_m ON
 
 
 ```
