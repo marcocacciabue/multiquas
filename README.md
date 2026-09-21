@@ -40,13 +40,14 @@ You need to have the following in the working directory:
 - a cvs file with four columns (sample_id,fastq_1,fastq_2,input_ref).
 
 Each line in the cvs file is a different sample of name sample_id. fastq_1 and fastq_2
-are the paths for the corresponding reads. input_ref is the reference to use (can be different
+are the relative paths for the corresponding reads. input_ref is the reference to use (can be different
 between samples). See [test.csv](https://github.com/marcocacciabue/multiquas/blob/7dbce91bae963665a2db907a9f699dc1e8de66c0/test.csv) for an example.
 If your sample files is called "samples.csv", you can then run:
 ```bash
 nextflow run marcocacciabue/multiquas --profile fast --input_csv samples.csv 
 
 ```
+Note: this command is different in the way that it will clone the repo directly to a nextflow folder for you. It is the same 
 ## What is that profile variable?
 Multiquas runs differents reconstructions softwares (Clique, Qure, Viquas, Haploflow, Savage) and with two modes, single  and multiple (using all references). The profiles option is an easy way to define how to run the pipeline. 
 ```bash
