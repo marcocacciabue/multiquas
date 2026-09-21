@@ -41,7 +41,7 @@ You need to have the following in the working directory:
 
 Each line in the cvs file is a different sample of name sample_id. fastq_1 and fastq_2
 are the paths for the corresponding reads. input_ref is the reference to use (can be different
-between samples).
+between samples). See [test.csv](https://github.com/marcocacciabue/multiquas/blob/7dbce91bae963665a2db907a9f699dc1e8de66c0/test.csv) for an example.
 
 
 
