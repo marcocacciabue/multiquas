@@ -107,23 +107,23 @@ Multiquas includes a set of several reconstructions algorithms that may
 increase over time (if there is some interest in it). Rigth now it comes
 with:
 
-- [CliqueSNV](https://github.com/vtsyvina/CliqueSNV) Knyazev *et al.*
-  (2021, ![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg))
+- [CliqueSNV](https://github.com/vtsyvina/CliqueSNV)\[![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)\]
+  Knyazev *et al.* (2021)
 
-- [QuRe](https://sourceforge.net/projects/qure/) Prosperi & Salemi
-  (2012,
-  ![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg))
+- [QuRe](https://sourceforge.net/projects/qure/)
+  \[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)\]
+  Prosperi & Salemi (2012)
 
-- [ViQuaS](http://sourceforge.net/projects/viquas/) Jayasundara *et al.*
-  (2015, ![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg))
+- [ViQuaS](http://sourceforge.net/projects/viquas/)
+  \[![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)\]
+  Jayasundara *et al.* (2015)
 
-- [Haploflow](https://github.com/hzi-bifo/Haploflow) Fritz *et al.*
-  (2021,
-  ![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg))
+- [Haploflow](https://github.com/hzi-bifo/Haploflow)\[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)\]
+  Fritz *et al.* (2021)
 
-- [Savage](https://github.com/HaploConduct/HaploConduct) Baaijens &
-  Schönhuth (2019,
-  ![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg))
+- [Savage](https://github.com/HaploConduct/HaploConduct)
+  \[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)\]
+  Baaijens & Schönhuth (2019)
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
