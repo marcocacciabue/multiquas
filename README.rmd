@@ -91,8 +91,15 @@ nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv --viquas_m
 Multiquas includes a set of several reconstructions algorithms that may increase over time (if there is some interest in it). Rigth now it comes with:
 
 -   [CliqueSNV](https://github.com/vtsyvina/CliqueSNV)
-@knyazev_accurate_2021 [(https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)]
--   [QuRe](https://sourceforge.net/projects/qure/) @prosperi_qure_2012 [(https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)]
--   [ViQuaS](http://sourceforge.net/projects/viquas/) @jayasundara_viquas_2015 [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)
--   [Haploflow](https://github.com/hzi-bifo/Haploflow) @fritz_haploflow_2021 [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)
--   [Savage](https://github.com/HaploConduct/HaploConduct) @baaijens_overlap_2019 [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)
+@knyazev_accurate_2021 
+[![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)]
+-   [QuRe](https://sourceforge.net/projects/qure/) @prosperi_qure_2012 
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)]
+
+-   [ViQuaS](http://sourceforge.net/projects/viquas/) @jayasundara_viquas_2015 
+[![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)]
+-   [Haploflow](https://github.com/hzi-bifo/Haploflow) @fritz_haploflow_2021
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)]
+-   [Savage](https://github.com/HaploConduct/HaploConduct) @baaijens_overlap_2019 [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)]
+
+
