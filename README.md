@@ -115,17 +115,17 @@ with:
   (2012).
   [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)](https://doi.org/10.1093/bioinformatics/btr627)
 
-- [ViQuaS](http://sourceforge.net/projects/viquas/)Jayasundara *et al.*
+- [ViQuaS](http://sourceforge.net/projects/viquas/) Jayasundara *et al.*
   (2015).
   [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576)
 
-- [Haploflow](https://github.com/hzi-bifo/Haploflow)Fritz *et al.*
+- [Haploflow](https://github.com/hzi-bifo/Haploflow) Fritz *et al.*
   (2021).
   [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)](https://doi.org/10.1093/bioinformatics/btu754)
 
-- [Savage](https://github.com/HaploConduct/HaploConduct)Baaijens &
+- [Savage](https://github.com/HaploConduct/HaploConduct) Baaijens &
   Schönhuth (2019).
-  \[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)\]<https://doi.org/10.1093/bioinformatics/btz2554>)
+  [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)](https://doi.org/10.1093/bioinformatics/btz2554)
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">

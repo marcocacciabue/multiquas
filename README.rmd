@@ -96,13 +96,13 @@ Multiquas includes a set of several reconstructions algorithms that may increase
 -   [QuRe](https://sourceforge.net/projects/qure/) @prosperi_qure_2012.
 [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)](https://doi.org/10.1093/bioinformatics/btr627)
 
--   [ViQuaS](http://sourceforge.net/projects/viquas/)@jayasundara_viquas_2015.
+-   [ViQuaS](http://sourceforge.net/projects/viquas/) @jayasundara_viquas_2015.
 [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576)
 
--   [Haploflow](https://github.com/hzi-bifo/Haploflow)@fritz_haploflow_2021.
+-   [Haploflow](https://github.com/hzi-bifo/Haploflow) @fritz_haploflow_2021.
 [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)](https://doi.org/10.1093/bioinformatics/btu754)
 
--   [Savage](https://github.com/HaploConduct/HaploConduct)@baaijens_overlap_2019.
-[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)]https://doi.org/10.1093/bioinformatics/btz2554)
+-   [Savage](https://github.com/HaploConduct/HaploConduct) @baaijens_overlap_2019.
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)](https://doi.org/10.1093/bioinformatics/btz2554)
 
 
