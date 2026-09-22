@@ -3,117 +3,356 @@
 	title = {{QuRe}: software for viral quasispecies reconstruction from next-generation sequencing data},
 	volume = {28},
 	issn = {1367-4811, 1367-4803},
-	shorttitle = {{QuRe}},
 	url = {https://academic.oup.com/bioinformatics/article/28/1/132/222153},
 	doi = {10.1093/bioinformatics/btr627},
+	shorttitle = {{QuRe}},
 	abstract = {Abstract
-            Summary: Next-generation sequencing (NGS) is an ideal framework for the characterization of highly variable pathogens, with a deep resolution able to capture minority variants. However, the reconstruction of all variants of a viral population infecting a host is a challenging task for genome regions larger than the average NGS read length. QuRe is a program for viral quasispecies reconstruction, specifically developed to analyze long read (\&gt;100 bp) NGS data. The software performs alignments of sequence fragments against a reference genome, finds an optimal division of the genome into sliding windows based on coverage and diversity and attempts to reconstruct all the individual sequences of the viral quasispecies—along with their prevalence—using a heuristic algorithm, which matches multinomial distributions of distinct viral variants overlapping across the genome division. QuRe comes with a built-in Poisson error correction method and a post-reconstruction probabilistic clustering, both parameterized on given error rates in homopolymeric and non-homopolymeric regions.
-            Availability: QuRe is platform-independent, multi-threaded software implemented in Java. It is distributed under the GNU General Public License, available at https://sourceforge.net/projects/qure/.
+            Summary: Next-generation sequencing ({NGS}) is an ideal framework for the characterization of highly variable pathogens, with a deep resolution able to capture minority variants. However, the reconstruction of all variants of a viral population infecting a host is a challenging task for genome regions larger than the average {NGS} read length. {QuRe} is a program for viral quasispecies reconstruction, specifically developed to analyze long read (\&gt;100 bp) {NGS} data. The software performs alignments of sequence fragments against a reference genome, finds an optimal division of the genome into sliding windows based on coverage and diversity and attempts to reconstruct all the individual sequences of the viral quasispecies—along with their prevalence—using a heuristic algorithm, which matches multinomial distributions of distinct viral variants overlapping across the genome division. {QuRe} comes with a built-in Poisson error correction method and a post-reconstruction probabilistic clustering, both parameterized on given error rates in homopolymeric and non-homopolymeric regions.
+            Availability: {QuRe} is platform-independent, multi-threaded software implemented in Java. It is distributed under the {GNU} General Public License, available at https://sourceforge.net/projects/qure/.
             Contact:  ahnven@yahoo.it; ahnven@gmail.com
             Supplementary information:  Supplementary data are available at Bioinformatics online.},
-	language = {en},
-	number = {1},
-	urldate = {2026-09-22},
-	journal = {Bioinformatics},
-	author = {Prosperi, Mattia C. F. and Salemi, Marco},
-	month = jan,
-	year = {2012},
 	pages = {132--133},
+	number = {1},
+	journaltitle = {Bioinformatics},
+	author = {Prosperi, Mattia C. F. and Salemi, Marco},
+	urldate = {2026-09-22},
+	date = {2012-01-01},
+	langid = {english},
 }
 
 @article{knyazev_accurate_2021,
 	title = {Accurate assembly of minority viral haplotypes from next-generation sequencing through efficient noise reduction},
 	volume = {49},
-	copyright = {https://creativecommons.org/licenses/by-nc/4.0/},
+	rights = {https://creativecommons.org/licenses/by-nc/4.0/},
 	issn = {0305-1048, 1362-4962},
 	url = {https://academic.oup.com/nar/article/49/17/e102/6313236},
 	doi = {10.1093/nar/gkab576},
 	abstract = {Abstract
-            Rapidly evolving RNA viruses continuously produce minority haplotypes that can become dominant if they are drug-resistant or can better evade the immune system. Therefore, early detection and identification of minority viral haplotypes may help to promptly adjust the patient’s treatment plan preventing potential disease complications. Minority haplotypes can be identified using next-generation sequencing, but sequencing noise hinders accurate identification. The elimination of sequencing noise is a non-trivial task that still remains open. Here we propose CliqueSNV based on extracting pairs of statistically linked mutations from noisy reads. This effectively reduces sequencing noise and enables identifying minority haplotypes with the frequency below the sequencing error rate. We comparatively assess the performance of CliqueSNV using an in vitro mixture of nine haplotypes that were derived from the mutation profile of an existing HIV patient. We show that CliqueSNV can accurately assemble viral haplotypes with frequencies as low as 0.1\% and maintains consistent performance across short and long bases sequencing platforms.},
-	language = {en},
-	number = {17},
-	urldate = {2026-09-22},
-	journal = {Nucleic Acids Research},
-	author = {Knyazev, Sergey and Tsyvina, Viachaslau and Shankar, Anupama and Melnyk, Andrew and Artyomenko, Alexander and Malygina, Tatiana and Porozov, Yuri B and Campbell, Ellsworth M and Switzer, William M and Skums, Pavel and Mangul, Serghei and Zelikovsky, Alex},
-	month = sep,
-	year = {2021},
+            Rapidly evolving {RNA} viruses continuously produce minority haplotypes that can become dominant if they are drug-resistant or can better evade the immune system. Therefore, early detection and identification of minority viral haplotypes may help to promptly adjust the patient’s treatment plan preventing potential disease complications. Minority haplotypes can be identified using next-generation sequencing, but sequencing noise hinders accurate identification. The elimination of sequencing noise is a non-trivial task that still remains open. Here we propose {CliqueSNV} based on extracting pairs of statistically linked mutations from noisy reads. This effectively reduces sequencing noise and enables identifying minority haplotypes with the frequency below the sequencing error rate. We comparatively assess the performance of {CliqueSNV} using an in vitro mixture of nine haplotypes that were derived from the mutation profile of an existing {HIV} patient. We show that {CliqueSNV} can accurately assemble viral haplotypes with frequencies as low as 0.1\% and maintains consistent performance across short and long bases sequencing platforms.},
 	pages = {e102--e102},
+	number = {17},
+	journaltitle = {Nucleic Acids Research},
+	author = {Knyazev, Sergey and Tsyvina, Viachaslau and Shankar, Anupama and Melnyk, Andrew and Artyomenko, Alexander and Malygina, Tatiana and Porozov, Yuri B and Campbell, Ellsworth M and Switzer, William M and Skums, Pavel and Mangul, Serghei and Zelikovsky, Alex},
+	urldate = {2026-09-22},
+	date = {2021-09-27},
+	langid = {english},
 }
 
 @article{jayasundara_viquas_2015,
 	title = {{ViQuaS}: an improved reconstruction pipeline for viral quasispecies spectra generated by next-generation sequencing},
 	volume = {31},
 	issn = {1367-4811, 1367-4803},
-	shorttitle = {{ViQuaS}},
 	url = {https://academic.oup.com/bioinformatics/article/31/6/886/215466},
 	doi = {10.1093/bioinformatics/btu754},
+	shorttitle = {{ViQuaS}},
 	abstract = {Abstract
-            Motivation: The combined effect of a high replication rate and the low fidelity of the viral polymerase in most RNA viruses and some DNA viruses results in the formation of a viral quasispecies. Uncovering information about quasispecies populations significantly benefits the study of disease progression, antiviral drug design, vaccine design and viral pathogenesis. We present a new analysis pipeline called ViQuaS for viral quasispecies spectrum reconstruction using short next-generation sequencing reads. ViQuaS is based on a novel reference-assisted de novo assembly algorithm for constructing local haplotypes. A significantly extended version of an existing global strain reconstruction algorithm is also used.
-            Results: Benchmarking results showed that ViQuaS outperformed three other previously published methods named ShoRAH, QuRe and PredictHaplo, with improvements of at least 3.1–53.9\% in recall, 0–12.1\% in precision and 0–38.2\% in F-score in terms of strain sequence assembly and improvements of at least 0.006–0.143 in KL-divergence and 0.001–0.035 in root mean-squared error in terms of strain frequency estimation, over the next-best algorithm under various simulation settings. We also applied ViQuaS on a real read set derived from an in vitro human immunodeficiency virus (HIV)-1 population, two independent datasets of foot-and-mouth-disease virus derived from the same biological sample and a real HIV-1 dataset and demonstrated better results than other methods available.
+            Motivation: The combined effect of a high replication rate and the low fidelity of the viral polymerase in most {RNA} viruses and some {DNA} viruses results in the formation of a viral quasispecies. Uncovering information about quasispecies populations significantly benefits the study of disease progression, antiviral drug design, vaccine design and viral pathogenesis. We present a new analysis pipeline called {ViQuaS} for viral quasispecies spectrum reconstruction using short next-generation sequencing reads. {ViQuaS} is based on a novel reference-assisted de novo assembly algorithm for constructing local haplotypes. A significantly extended version of an existing global strain reconstruction algorithm is also used.
+            Results: Benchmarking results showed that {ViQuaS} outperformed three other previously published methods named {ShoRAH}, {QuRe} and {PredictHaplo}, with improvements of at least 3.1–53.9\% in recall, 0–12.1\% in precision and 0–38.2\% in F-score in terms of strain sequence assembly and improvements of at least 0.006–0.143 in {KL}-divergence and 0.001–0.035 in root mean-squared error in terms of strain frequency estimation, over the next-best algorithm under various simulation settings. We also applied {ViQuaS} on a real read set derived from an in vitro human immunodeficiency virus ({HIV})-1 population, two independent datasets of foot-and-mouth-disease virus derived from the same biological sample and a real {HIV}-1 dataset and demonstrated better results than other methods available.
             Availability and implementation:  http://sourceforge.net/projects/viquas/
             Contact:  d.jayasundara@student.unimelb.edu.au
             Supplementary information:  Supplementary data are available at Bioinformatics online.},
-	language = {en},
-	number = {6},
-	urldate = {2026-09-22},
-	journal = {Bioinformatics},
-	author = {Jayasundara, Duleepa and Saeed, I. and Maheswararajah, Suhinthan and Chang, B.C. and Tang, S.-L. and Halgamuge, Saman K.},
-	month = mar,
-	year = {2015},
 	pages = {886--896},
+	number = {6},
+	journaltitle = {Bioinformatics},
+	author = {Jayasundara, Duleepa and Saeed, I. and Maheswararajah, Suhinthan and Chang, B.C. and Tang, S.-L. and Halgamuge, Saman K.},
+	urldate = {2026-09-22},
+	date = {2015-03-15},
+	langid = {english},
 }
 
 @article{fritz_haploflow_2021,
 	title = {Haploflow: strain-resolved de novo assembly of viral genomes},
 	volume = {22},
 	issn = {1474-760X},
-	shorttitle = {Haploflow},
 	url = {https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02426-8},
 	doi = {10.1186/s13059-021-02426-8},
+	shorttitle = {Haploflow},
 	abstract = {Abstract
-            With viral infections, multiple related viral strains are often present due to coinfection or within-host evolution. We describe Haploflow, a deBruijn graph-based assembler for de novo genome assembly of viral strains from mixed sequence samples using a novel flow algorithm. We assess Haploflow across multiple benchmark data sets of increasing complexity, showing that Haploflow is faster and more accurate than viral haplotype assemblers and generic metagenome assemblers not aiming to reconstruct strains. We show Haploflow reconstructs viral strain genomes from patient HCMV samples and SARS-CoV-2 wastewater samples identical to clinical isolates.},
-	language = {en},
-	number = {1},
-	urldate = {2026-09-22},
-	journal = {Genome Biology},
-	author = {Fritz, Adrian and Bremges, Andreas and Deng, Zhi-Luo and Lesker, Till Robin and Götting, Jasper and Ganzenmueller, Tina and Sczyrba, Alexander and Dilthey, Alexander and Klawonn, Frank and McHardy, Alice Carolyn},
-	month = dec,
-	year = {2021},
+            With viral infections, multiple related viral strains are often present due to coinfection or within-host evolution. We describe Haploflow, a {deBruijn} graph-based assembler for de novo genome assembly of viral strains from mixed sequence samples using a novel flow algorithm. We assess Haploflow across multiple benchmark data sets of increasing complexity, showing that Haploflow is faster and more accurate than viral haplotype assemblers and generic metagenome assemblers not aiming to reconstruct strains. We show Haploflow reconstructs viral strain genomes from patient {HCMV} samples and {SARS}-{CoV}-2 wastewater samples identical to clinical isolates.},
 	pages = {212},
+	number = {1},
+	journaltitle = {Genome Biology},
+	shortjournal = {Genome Biol},
+	author = {Fritz, Adrian and Bremges, Andreas and Deng, Zhi-Luo and Lesker, Till Robin and Götting, Jasper and Ganzenmueller, Tina and Sczyrba, Alexander and Dilthey, Alexander and Klawonn, Frank and {McHardy}, Alice Carolyn},
+	urldate = {2026-09-22},
+	date = {2021-12},
+	langid = {english},
 	file = {Texto completo:/home/marco/Zotero/storage/8UUZLJDU/Fritz et al. - 2021 - Haploflow strain-resolved de novo assembly of viral genomes.pdf:application/pdf},
 }
 
 @article{baaijens_overlap_2019,
 	title = {Overlap graph-based generation of haplotigs for diploids and polyploids},
 	volume = {35},
-	copyright = {https://academic.oup.com/journals/pages/open\_access/funder\_policies/chorus/standard\_publication\_model},
+	rights = {https://academic.oup.com/journals/pages/open\_access/funder\_policies/chorus/standard\_publication\_model},
 	issn = {1367-4803, 1367-4811},
 	url = {https://academic.oup.com/bioinformatics/article/35/21/4281/5474903},
 	doi = {10.1093/bioinformatics/btz255},
 	abstract = {Abstract
             
               Motivation
-              Haplotype-aware genome assembly plays an important role in genetics, medicine and various other disciplines, yet generation of haplotype-resolved de novo assemblies remains a major challenge. Beyond distinguishing between errors and true sequential variants, one needs to assign the true variants to the different genome copies. Recent work has pointed out that the enormous quantities of traditional NGS read data have been greatly underexploited in terms of haplotig computation so far, which reflects that methodology for reference independent haplotig computation has not yet reached maturity.
+              Haplotype-aware genome assembly plays an important role in genetics, medicine and various other disciplines, yet generation of haplotype-resolved de novo assemblies remains a major challenge. Beyond distinguishing between errors and true sequential variants, one needs to assign the true variants to the different genome copies. Recent work has pointed out that the enormous quantities of traditional {NGS} read data have been greatly underexploited in terms of haplotig computation so far, which reflects that methodology for reference independent haplotig computation has not yet reached maturity.
             
             
               Results
-              We present POLYploid genome fitTEr (POLYTE) as a new approach to de novo generation of haplotigs for diploid and polyploid genomes of known ploidy. Our method follows an iterative scheme where in each iteration reads or contigs are joined, based on their interplay in terms of an underlying haplotype-aware overlap graph. Along the iterations, contigs grow while preserving their haplotype identity. Benchmarking experiments on both real and simulated data demonstrate that POLYTE establishes new standards in terms of error-free reconstruction of haplotype-specific sequence. As a consequence, POLYTE outperforms state-of-the-art approaches in various relevant aspects, where advantages become particularly distinct in polyploid settings.
+              We present {POLYploid} genome {fitTEr} ({POLYTE}) as a new approach to de novo generation of haplotigs for diploid and polyploid genomes of known ploidy. Our method follows an iterative scheme where in each iteration reads or contigs are joined, based on their interplay in terms of an underlying haplotype-aware overlap graph. Along the iterations, contigs grow while preserving their haplotype identity. Benchmarking experiments on both real and simulated data demonstrate that {POLYTE} establishes new standards in terms of error-free reconstruction of haplotype-specific sequence. As a consequence, {POLYTE} outperforms state-of-the-art approaches in various relevant aspects, where advantages become particularly distinct in polyploid settings.
             
             
               Availability and implementation
-              POLYTE is freely available as part of the HaploConduct package at https://github.com/HaploConduct/HaploConduct, implemented in Python and C++.
+              {POLYTE} is freely available as part of the {HaploConduct} package at https://github.com/{HaploConduct}/{HaploConduct}, implemented in Python and C++.
             
             
               Supplementary information
               Supplementary data are available at Bioinformatics online.},
-	language = {en},
+	pages = {4281--4289},
 	number = {21},
-	urldate = {2026-09-22},
-	journal = {Bioinformatics},
+	journaltitle = {Bioinformatics},
 	author = {Baaijens, Jasmijn A and Schönhuth, Alexander},
 	editor = {Hancock, John},
-	month = nov,
-	year = {2019},
-	pages = {4281--4289},
+	urldate = {2026-09-22},
+	date = {2019-11-01},
+	langid = {english},
 	file = {Versión enviada:/home/marco/Zotero/storage/2266CCZU/Baaijens y Schönhuth - 2019 - Overlap graph-based generation of haplotigs for diploids and polyploids.pdf:application/pdf},
+}
+
+@article{katoh_mafft_2013,
+	title = {{MAFFT} Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability},
+	volume = {30},
+	issn = {0737-4038, 1537-1719},
+	url = {https://academic.oup.com/mbe/article-lookup/doi/10.1093/molbev/mst010},
+	doi = {10.1093/molbev/mst010},
+	shorttitle = {{MAFFT} Multiple Sequence Alignment Software Version 7},
+	pages = {772--780},
+	number = {4},
+	journaltitle = {Molecular Biology and Evolution},
+	shortjournal = {Molecular Biology and Evolution},
+	author = {Katoh, K. and Standley, D. M.},
+	urldate = {2026-09-22},
+	date = {2013-04-01},
+	langid = {english},
+}
+
+@article{li_sequence_2009,
+	title = {The Sequence Alignment/Map format and {SAMtools}},
+	volume = {25},
+	rights = {http://creativecommons.org/licenses/by-nc/2.0/uk/},
+	issn = {1367-4811, 1367-4803},
+	url = {https://academic.oup.com/bioinformatics/article/25/16/2078/204688},
+	doi = {10.1093/bioinformatics/btp352},
+	abstract = {Abstract
+            Summary: The Sequence Alignment/Map ({SAM}) format is a generic alignment format for storing read alignments against reference sequences, supporting short and long reads (up to 128 Mbp) produced by different sequencing platforms. It is flexible in style, compact in size, efficient in random access and is the format in which alignments from the 1000 Genomes Project are released. {SAMtools} implements various utilities for post-processing alignments in the {SAM} format, such as indexing, variant caller and alignment viewer, and thus provides universal tools for processing read alignments.
+            Availability:  http://samtools.sourceforge.net
+            Contact:  rd@sanger.ac.uk},
+	pages = {2078--2079},
+	number = {16},
+	journaltitle = {Bioinformatics},
+	author = {Li, Heng and Handsaker, Bob and Wysoker, Alec and Fennell, Tim and Ruan, Jue and Homer, Nils and Marth, Gabor and Abecasis, Goncalo and Durbin, Richard and {1000 Genome Project Data Processing Subgroup}},
+	urldate = {2026-09-22},
+	date = {2009-08-15},
+	langid = {english},
+}
+
+@article{quinlan_bedtools_2010,
+	title = {{BEDTools}: a flexible suite of utilities for comparing genomic features},
+	volume = {26},
+	rights = {http://creativecommons.org/licenses/by-nc/2.0/uk/},
+	issn = {1367-4811, 1367-4803},
+	url = {https://academic.oup.com/bioinformatics/article/26/6/841/244688},
+	doi = {10.1093/bioinformatics/btq033},
+	shorttitle = {{BEDTools}},
+	abstract = {Abstract
+            Motivation: Testing for correlations between different sets of genomic features is a fundamental task in genomics research. However, searching for overlaps between features with existing web-based methods is complicated by the massive datasets that are routinely produced with current sequencing technologies. Fast and flexible tools are therefore required to ask complex questions of these data in an efficient manner.
+            Results: This article introduces a new software suite for the comparison, manipulation and annotation of genomic features in Browser Extensible Data ({BED}) and General Feature Format ({GFF}) format. {BEDTools} also supports the comparison of sequence alignments in {BAM} format to both {BED} and {GFF} features. The tools are extremely efficient and allow the user to compare large datasets (e.g. next-generation sequencing data) with both public and custom genome annotation tracks. {BEDTools} can be combined with one another as well as with standard {UNIX} commands, thus facilitating routine genomics tasks as well as pipelines that can quickly answer intricate questions of large genomic datasets.
+            Availability and implementation: {BEDTools} was written in C++. Source code and a comprehensive user manual are freely available at http://code.google.com/p/bedtools
+            Contact:  aaronquinlan@gmail.com; imh4y@virginia.edu
+            Supplementary information:  Supplementary data are available at Bioinformatics online.},
+	pages = {841--842},
+	number = {6},
+	journaltitle = {Bioinformatics},
+	author = {Quinlan, Aaron R. and Hall, Ira M.},
+	urldate = {2026-09-22},
+	date = {2010-03-15},
+	langid = {english},
+}
+
+@article{bushnell_bbmerge_2017,
+	title = {{BBMerge} – Accurate paired shotgun read merging via overlap},
+	volume = {12},
+	issn = {1932-6203},
+	url = {https://dx.plos.org/10.1371/journal.pone.0185056},
+	doi = {10.1371/journal.pone.0185056},
+	pages = {e0185056},
+	number = {10},
+	journaltitle = {{PLOS} {ONE}},
+	shortjournal = {{PLoS} {ONE}},
+	author = {Bushnell, Brian and Rood, Jonathan and Singer, Esther},
+	editor = {Biggs, Patrick Jon},
+	urldate = {2026-09-22},
+	date = {2017-10-26},
+	langid = {english},
+	file = {Texto completo:/home/marco/Zotero/storage/D5553UXP/Bushnell et al. - 2017 - BBMerge – Accurate paired shotgun read merging via overlap.pdf:application/pdf},
+}
+
+@article{langmead_fast_2012,
+	title = {Fast gapped-read alignment with Bowtie 2},
+	volume = {9},
+	rights = {http://www.springer.com/tdm},
+	issn = {1548-7091, 1548-7105},
+	url = {https://www.nature.com/articles/nmeth.1923},
+	doi = {10.1038/nmeth.1923},
+	pages = {357--359},
+	number = {4},
+	journaltitle = {Nature Methods},
+	shortjournal = {Nat Methods},
+	author = {Langmead, Ben and Salzberg, Steven L},
+	urldate = {2026-09-22},
+	date = {2012-04},
+	langid = {english},
+}
+
+@article{wilm_lofreq_2012,
+	title = {{LoFreq}: a sequence-quality aware, ultra-sensitive variant caller for uncovering cell-population heterogeneity from high-throughput sequencing datasets},
+	volume = {40},
+	rights = {http://creativecommons.org/licenses/by-nc/3.0},
+	issn = {1362-4962, 0305-1048},
+	url = {https://academic.oup.com/nar/article/40/22/11189/1152727},
+	doi = {10.1093/nar/gks918},
+	shorttitle = {{LoFreq}},
+	pages = {11189--11201},
+	number = {22},
+	journaltitle = {Nucleic Acids Research},
+	author = {Wilm, Andreas and Aw, Pauline Poh Kim and Bertrand, Denis and Yeo, Grace Hui Ting and Ong, Swee Hoe and Wong, Chang Hua and Khor, Chiea Chuen and Petric, Rosemary and Hibberd, Martin Lloyd and Nagarajan, Niranjan},
+	urldate = {2026-09-22},
+	date = {2012-12-01},
+	langid = {english},
+}
+
+@article{zhang_pear_2014,
+	title = {{PEAR}: a fast and accurate Illumina Paired-End {reAd} {mergeR}},
+	volume = {30},
+	rights = {http://creativecommons.org/licenses/by/3.0/},
+	issn = {1367-4811, 1367-4803},
+	url = {https://academic.oup.com/bioinformatics/article/30/5/614/247231},
+	doi = {10.1093/bioinformatics/btt593},
+	shorttitle = {{PEAR}},
+	abstract = {Abstract
+            Motivation: The Illumina paired-end sequencing technology can generate reads from both ends of target {DNA} fragments, which can subsequently be merged to increase the overall read length. There already exist tools for merging these paired-end reads when the target fragments are equally long. However, when fragment lengths vary and, in particular, when either the fragment size is shorter than a single-end read, or longer than twice the size of a single-end read, most state-of-the-art mergers fail to generate reliable results. Therefore, a robust tool is needed to merge paired-end reads that exhibit varying overlap lengths because of varying target fragment lengths.
+            Results: We present the {PEAR} software for merging raw Illumina paired-end reads from target fragments of varying length. The program evaluates all possible paired-end read overlaps and does not require the target fragment size as input. It also implements a statistical test for minimizing false-positive results. Tests on simulated and empirical data show that {PEAR} consistently generates highly accurate merged paired-end reads. A highly optimized implementation allows for merging millions of paired-end reads within a few minutes on a standard desktop computer. On multi-core architectures, the parallel version of {PEAR} shows linear speedups compared with the sequential version of {PEAR}.
+            Availability and implementation: {PEAR} is implemented in C and uses {POSIX} threads. It is freely available at http://www.exelixis-lab.org/web/software/pear.
+            Contact:  Tomas.Flouri@h-its.org},
+	pages = {614--620},
+	number = {5},
+	journaltitle = {Bioinformatics},
+	author = {Zhang, Jiajie and Kobert, Kassian and Flouri, Tomáš and Stamatakis, Alexandros},
+	urldate = {2026-09-22},
+	date = {2014-03-01},
+	langid = {english},
+}
+
+@article{shen_seqkit2_2024,
+	title = {{SeqKit}2: A Swiss army knife for sequence and alignment processing},
+	volume = {3},
+	issn = {2770-5986, 2770-596X},
+	url = {https://onlinelibrary.wiley.com/doi/10.1002/imt2.191},
+	doi = {10.1002/imt2.191},
+	shorttitle = {{SeqKit}2},
+	abstract = {Abstract
+            In the era of ubiquitous high‐throughput sequencing studies, there is a growing need for analysis tools that are not just performant but also comprehensive and user‐friendly enough to cater to both novice and advanced users. This article introduces {SeqKit}2, the next iteration of the widely used sequence analysis tool {SeqKit}, featuring expanded functionality, performance optimizations, and support for additional compression methods. Retaining a pragmatic subcommand architecture, {SeqKit}2 represents substantial enhancement through the inclusion of 19 additional subcommands, expanding its overall repertoire to a total of 38 in eight categories. The new subcommands add functionality such as amplicon processing and robust, error‐tolerant parsing of sequence records. In addition, three subcommands designed for real‐time analysis are added for periodic monitoring of properties of {FASTQ} and Binary Alignment/Map alignment records and real‐time streaming from multiple sequence files. The performance of {SeqKit}2 is benchmarked against the old version of {SeqKit}, Bioawk, Seqtk, and {SeqFu} tools. {SeqKit}2 consistently outperforms its predecessor, albeit with marginally higher memory usage, while maintaining competitive runtimes against other tools. With its broad functionality, proven usability, and ongoing development driven by user feedback, we hope that bioinformaticians will find {SeqKit}2 useful as a “Swiss army knife” of sequence and alignment processing—equally adept at facilitating ad hoc analyses and seamlessly integrating into larger pipelines.
+          , 
+            Highlights
+            
+              
+                
+                  {SeqKit}2 expands its capabilities, doubling the number of subcommands from 19 to 38, and adding support for three more compression file formats.
+                
+                
+                  {SeqKit}2 outperforms its predecessor and maintains competitive with other tools.
+                
+                
+                  {SeqKit}2 improves user‐friendliness with new features, like, autocompletion, progress bars, and enhanced error handling.},
+	pages = {e191},
+	number = {3},
+	journaltitle = {{iMeta}},
+	shortjournal = {{iMeta}},
+	author = {Shen, Wei and Sipos, Botond and Zhao, Liuyang},
+	urldate = {2026-09-22},
+	date = {2024-06},
+	langid = {english},
+	file = {Versión enviada:/home/marco/Zotero/storage/PATJTAEN/Shen et al. - 2024 - SeqKit2 A Swiss army knife for sequence and alignment processing.pdf:application/pdf},
+}
+
+@software{h_pages_biostrings_2017,
+	title = {Biostrings},
+	url = {https://bioconductor.org/packages/Biostrings},
+	doi = {10.18129/B9.BIOC.BIOSTRINGS},
+	publisher = {Bioconductor},
+	author = {H. Pagès, P. Aboyoun},
+	urldate = {2026-09-22},
+	date = {2017},
+}
+
+@article{obenchain_variantannotation_2014,
+	title = {{VariantAnnotation} : a Bioconductor package for exploration and annotation of genetic variants},
+	volume = {30},
+	issn = {1367-4811, 1367-4803},
+	url = {https://academic.oup.com/bioinformatics/article/30/14/2076/2391109},
+	doi = {10.1093/bioinformatics/btu168},
+	shorttitle = {{VariantAnnotation}},
+	abstract = {Abstract
+            Summary:  {VariantAnnotation} is an R / Bioconductor package for the exploration and annotation of genetic variants. Capabilities exist for reading, writing and filtering variant call format ({VCF}) files. {VariantAnnotation} allows ready access to additional R / Bioconductor facilities for advanced statistical analysis, data transformation, visualization and integration with diverse genomic resources.
+            Availability and implementation: This package is implemented in R and available for download at the Bioconductor Web site ( http://bioconductor.org/packages/2.13/bioc/html/ {VariantAnnotation} .html ). The package contains extensive help pages for individual functions and a ‘vignette’ outlining typical work flows; it is made available under the open source ‘Artistic-2.0’ license. Version 1.9.38 was used in this article.
+            Contact:  vobencha@fhcrc.org},
+	pages = {2076--2078},
+	number = {14},
+	journaltitle = {Bioinformatics},
+	author = {Obenchain, Valerie and Lawrence, Michael and Carey, Vincent and Gogarten, Stephanie and Shannon, Paul and Morgan, Martin},
+	urldate = {2026-09-22},
+	date = {2014-07-15},
+	langid = {english},
+}
+
+@incollection{greenbaum_seqinr_2007,
+	location = {Berlin, Heidelberg},
+	title = {{SeqinR} 1.0-2: A Contributed Package to the R Project for Statistical Computing Devoted to Biological Sequences Retrieval and Analysis},
+	isbn = {978-3-540-35305-8 978-3-540-35306-5},
+	url = {http://link.springer.com/10.1007/978-3-540-35306-5_10},
+	doi = {10.1007/978-3-540-35306-5_10},
+	shorttitle = {{SeqinR} 1.0-2},
+	pages = {207--232},
+	booktitle = {Structural Approaches to Sequence Evolution},
+	publisher = {Springer Berlin Heidelberg},
+	author = {Charif, Delphine and Lobry, Jean R.},
+	editor = {Bastolla, Ugo and Porto, Markus and Roman, H. Eduardo and Vendruscolo, Michele},
+	editorb = {Greenbaum, Elias},
+	editorbtype = {redactor},
+	urldate = {2026-09-22},
+	date = {2007},
+	note = {Series Title: Biological and Medical Physics, Biomedical Engineering},
+}
+
+@book{wickham_ggplot2_2016,
+	title = {ggplot2: Elegant Graphics for Data Analysis},
+	isbn = {978-3-319-24277-4},
+	url = {https://ggplot2.tidyverse.org},
+	publisher = {Springer-Verlag New York},
+	author = {Wickham, Hadley},
+	date = {2016},
+}
+
+@article{paradis_ape_2004,
+	title = {{APE}: Analyses of Phylogenetics and Evolution in R language},
+	volume = {20},
+	issn = {1367-4811, 1367-4803},
+	url = {https://academic.oup.com/bioinformatics/article/20/2/289/204981},
+	doi = {10.1093/bioinformatics/btg412},
+	shorttitle = {{APE}},
+	abstract = {Abstract
+            Summary: Analysis of Phylogenetics and Evolution ({APE}) is a package written in the R language for use in molecular evolution and phylogenetics. {APE} provides both utility functions for reading and writing data and manipulating phylogenetic trees, as well as several advanced methods for phylogenetic and evolutionary analysis (e.g. comparative and population genetic methods). {APE} takes advantage of the many R functions for statistics and graphics, and also provides a flexible framework for developing and implementing further statistical methods for the analysis of evolutionary processes.
+            Availability: The program is free and available from the official R package archive at http://cran.r-project.org/src/contrib/{PACKAGES}.html\#ape. {APE} is licensed under the {GNU} General Public License.},
+	pages = {289--290},
+	number = {2},
+	journaltitle = {Bioinformatics},
+	author = {Paradis, Emmanuel and Claude, Julien and Strimmer, Korbinian},
+	urldate = {2026-09-22},
+	date = {2004-01-22},
+	langid = {english},
 }
