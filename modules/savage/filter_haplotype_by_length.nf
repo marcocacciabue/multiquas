@@ -32,6 +32,7 @@ process FILTER_HAPLOTYPES_BY_LENGTH {
   
   script:
     """
+    # TODO add seqkit to tools image
     seqkit seq --min-len 100 ${reconstructedVariants} > ${sample_id}_${reconstructer}_${method}_${contig_name}_reconstructed_variants_filtered.fasta
     
     # check if at least one haplotype is left after filtering step.

@@ -1,7 +1,7 @@
 # MultiQuas
 
-[![](https://img.shields.io/badge/nextflow-25.10.7-green)](https://www.nextflow.io)
-[![](https://img.shields.io/badge/docker-29.1.3-blue)](https://docs.docker.com/get-docker)
+[![](https://img.shields.io/badge/nextflow-v25.10.7-green)](https://www.nextflow.io)
+[![](https://img.shields.io/badge/docker-v29.1.3-blue)](https://docs.docker.com/get-docker)
 
 ## Why Multiquas?
 
@@ -104,7 +104,7 @@ nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv --viquas_m
 ## Reconstruction algorithms
 
 Multiquas includes a set of several reconstructions algorithms that may
-increase over time (if there is some interest in it). Rigth now it comes
+increase over time (if there is some interest in it). Right now it comes
 with:
 
 - [CliqueSNV](https://github.com/vtsyvina/CliqueSNV) Knyazev *et al.*
@@ -126,6 +126,51 @@ with:
 - [Savage](https://github.com/HaploConduct/HaploConduct) Baaijens &
   Schönhuth (2019).
   [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)](https://doi.org/10.1093/bioinformatics/btz2554)
+
+Please cite them if you use Multiquas.
+
+## Bionformatics tools
+
+Additionally, Multiquas make use of several more general bioinformatics
+tools:
+
+[![](https://img.shields.io/badge/mafft-v7.505-blue)](https://mafft.cbrc.jp/alignment/server/index.html)
+[![](https://zenodo.org/badge/DOI/10.1093/molbev/mst010.svg)](https://doi.org/10.1093/molbev/mst010)
+[![](https://img.shields.io/badge/samtools-v1.17-blue)](https://mafft.cbrc.jp/alignment/server/index.html)
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btp352.svg)](https://doi.org/10.1093/bioinformatics/btp352)
+[![](https://img.shields.io/badge/bedtools-v2.31.1-blue)](https://bedtools.readthedocs.io/en/stable/)
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btq033.svg)](https://doi.org/10.1093/bioinformatics/btq033)
+[![](https://img.shields.io/badge/bowtie2-2.5.1-blue)](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+[![](https://zenodo.org/badge/DOI/10.1038/nmeth.1923.svg)](https://doi.org/%2010.1038/nmeth.1923)
+[![](https://img.shields.io/badge/bbmap-39.01-blue)](https://bbmap.org/)
+[![](https://zenodo.org/badge/DOI/10.1371/journal.pone.0185056.svg)](https://doi.org/10.1371/journal.pone.0185056)
+[![](https://img.shields.io/badge/seqtk-1.5-blue)](https://github.com/lh3/seqtk)
+
+[![](https://img.shields.io/badge/lofreq-2.1.5-blue)](https://csb5.github.io/lofreq/)
+[![](https://zenodo.org/badge/DOI/10.1093/nar/gks918.svg)](https://doi.org/10.1093/nar/gks918)
+
+[![](https://img.shields.io/badge/pear-0.9.11-blue)](https://cme.h-its.org/exelixis/web/software/pear/doc.html)
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btt593.svg)](https://doi.org/10.1093/bioinformatics/btt593)
+
+[![](https://img.shields.io/badge/seqkit2-2.13.0-blue)](https://bioinf.shenwei.me/seqkit/)
+[![](https://zenodo.org/badge/DOI/10.1002/imt2.191.svg)](https://doi.org/10.1002/imt2.191)
+
+[![](https://img.shields.io/badge/biostrings-2.80.2-blue)](https://bioconductor.org/packages/release/bioc/html/Biostrings.html)
+[![](https://zenodo.org/badge/DOI/10.18129/B9.bioc.Biostrings.svg)](https://doi.org/10.18129/B9.bioc.Biostrings)
+
+[![](https://img.shields.io/badge/VariantAnnotation-1.58.0-blue)](https://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html)
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu168.svg)](https://doi.org/10.1093/bioinformatics/btu168)
+
+[![](https://img.shields.io/badge/seqinr-4.2.36-blue)](https://github.com/lbbe-software/seqinr)
+[![](https://zenodo.org/badge/DOI/10.1007/978-3-540-35306-5_10.svg)](https://doi.org/10.1007/978-3-540-35306-5_10)
+
+[![](https://img.shields.io/badge/ggplot2-4.0.3-blue)](https://ggplot2.tidyverse.org/)
+[![](https://zenodo.org/badge/DOI/10.1007/978-3-319-24277-4.svg)](https://doi.org/10.1007/978-3-319-24277-4)
+
+[![](https://img.shields.io/badge/ape-5.8.1-blue)](https://ggplot2.tidyverse.org/https://cran.r-project.org/web/packages/ape/index.html)
+[![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btg412.svg)](https://doi.org/10.1093/bioinformatics/btg41210.1007/978-3-319-24277-4)
+
+[![](https://img.shields.io/badge/voRtex-0.0.6-blue)](https://github.com/marcocacciabue/voRtex)
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
