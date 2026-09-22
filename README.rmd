@@ -4,6 +4,8 @@ output:
   md_document:
     variant: gfm
 bibliography: citation/bibliography.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/research-institute-for-nature-and-forest.csl
+
 date: "2026-09-22"
 ---
 
@@ -88,7 +90,8 @@ nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv --viquas_m
 
 Multiquas includes a set of several reconstructions algorithms that may increase over time (if there is some interest in it). Rigth now it comes with:
 
--   [CliqueSNV](https://github.com/vtsyvina/CliqueSNV) @knyazev_accurate_2021
+-   [CliqueSNV](https://github.com/vtsyvina/CliqueSNV)
+[![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)]@knyazev_accurate_2021
 -   [QuRe](https://sourceforge.net/projects/qure/) @prosperi_qure_2012
 -   [ViQuaS](http://sourceforge.net/projects/viquas/) @jayasundara_viquas_2015
 -   [Haploflow](https://github.com/hzi-bifo/Haploflow) @fritz_haploflow_2021
