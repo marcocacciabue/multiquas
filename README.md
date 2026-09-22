@@ -1,10 +1,15 @@
-# Multiquas
+# MultiQuas
 
 [![](https://img.shields.io/badge/nextflow-25.10.7-green)](https://www.nextflow.io) [![](https://img.shields.io/badge/docker-29.1.3-blue)](https://docs.docker.com/get-docker)
 
-## Install
+## Why Multiquas?
+MultiQuas is all in one pipeline for the reconstruction of viral quasispecies population from short read data.
+It comes with *multiple* reconstructions algorithms and the user can use *multiple* references (ideally sequences expected to be present in the population) to produce better results.   
+Also, the pipeline includes an evaluation step that gives an idea of how plausible the quasispecies is for each of the reconstruction algorithms.
 
-Requires [nextflow](https://www.nextflow.io) and [docker](https://docs.docker.com/get-docker)) installed. Please install those dependencies.
+## Requirements
+
+Requires [nextflow](https://www.nextflow.io) and [docker](https://docs.docker.com/get-docker). Please install those dependencies.
 
 ## No time to waste
 If you just want to see the tool in action run the following:
@@ -69,7 +74,7 @@ nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv
 
 
 ```
-Users can override this behavior and set on or off specific algorithm. For example: the following adds the Viquas multiple step to the default behaivour
+Users can override this behavior and set on or off specific algorithms. For example: the following adds the Viquas multiple step to the default behaivour
 ```bash
 
 nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv --viquas_m ON
