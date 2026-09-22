@@ -1,0 +1,407 @@
+# This CITATION.cff reference content was generated from Zotero.
+references:
+  - title: >-
+      QuRe: software for viral quasispecies reconstruction from next-generation sequencing data
+    abstract: |
+      Abstract
+                  Summary: Next-generation sequencing (NGS) is an ideal framework for the characterization of highly variable pathogens, with a deep resolution able to capture minority variants. However, the reconstruction of all variants of a viral population infecting a host is a challenging task for genome regions larger than the average NGS read length. QuRe is a program for viral quasispecies reconstruction, specifically developed to analyze long read (&gt;100 bp) NGS data. The software performs alignments of sequence fragments against a reference genome, finds an optimal division of the genome into sliding windows based on coverage and diversity and attempts to reconstruct all the individual sequences of the viral quasispecies—along with their prevalence—using a heuristic algorithm, which matches multinomial distributions of distinct viral variants overlapping across the genome division. QuRe comes with a built-in Poisson error correction method and a post-reconstruction probabilistic clustering, both parameterized on given error rates in homopolymeric and non-homopolymeric regions.
+                  Availability: QuRe is platform-independent, multi-threaded software implemented in Java. It is distributed under the GNU General Public License, available at https://sourceforge.net/projects/qure/.
+                  Contact:  ahnven@yahoo.it; ahnven@gmail.com
+                  Supplementary information:  Supplementary data are available at Bioinformatics online.
+    type: journalArticle
+    database: DOI.org (Crossref)
+    date-accessed: 2026-09-22T13:58:38Z
+    issn: 1367-4811, 1367-4803
+    issue: 1
+    languages: 
+      - en
+    pages: 132-133
+    volume: 28
+    url: https://academic.oup.com/bioinformatics/article/28/1/132/222153
+    authors: 
+      - family-names: Prosperi
+        given-names: Mattia C. F.
+      - family-names: Salemi
+        given-names: Marco
+    editors: 
+      - family-names: Prosperi
+        given-names: Mattia C. F.
+      - family-names: Salemi
+        given-names: Marco
+    recipients: 
+      - family-names: Prosperi
+        given-names: Mattia C. F.
+      - family-names: Salemi
+        given-names: Marco
+    translators: 
+      - family-names: Prosperi
+        given-names: Mattia C. F.
+      - family-names: Salemi
+        given-names: Marco
+    date-published: 2012-01-01
+    identifiers: 
+      - type: doi
+        value: 10.1093/bioinformatics/btr627
+  - title: >-
+      Accurate assembly of minority viral haplotypes from next-generation sequencing through efficient noise reduction
+    abstract: |
+      Abstract
+                  Rapidly evolving RNA viruses continuously produce minority haplotypes that can become dominant if they are drug-resistant or can better evade the immune system. Therefore, early detection and identification of minority viral haplotypes may help to promptly adjust the patient’s treatment plan preventing potential disease complications. Minority haplotypes can be identified using next-generation sequencing, but sequencing noise hinders accurate identification. The elimination of sequencing noise is a non-trivial task that still remains open. Here we propose CliqueSNV based on extracting pairs of statistically linked mutations from noisy reads. This effectively reduces sequencing noise and enables identifying minority haplotypes with the frequency below the sequencing error rate. We comparatively assess the performance of CliqueSNV using an in vitro mixture of nine haplotypes that were derived from the mutation profile of an existing HIV patient. We show that CliqueSNV can accurately assemble viral haplotypes with frequencies as low as 0.1% and maintains consistent performance across short and long bases sequencing platforms.
+    type: journalArticle
+    license: https://creativecommons.org/licenses/by-nc/4.0/
+    copyright: https://creativecommons.org/licenses/by-nc/4.0/
+    database: DOI.org (Crossref)
+    date-accessed: 2026-09-22T14:00:36Z
+    issn: 0305-1048, 1362-4962
+    issue: 17
+    languages: 
+      - en
+    pages: e102-e102
+    volume: 49
+    url: https://academic.oup.com/nar/article/49/17/e102/6313236
+    authors: 
+      - family-names: Knyazev
+        given-names: Sergey
+      - family-names: Tsyvina
+        given-names: Viachaslau
+      - family-names: Shankar
+        given-names: Anupama
+      - family-names: Melnyk
+        given-names: Andrew
+      - family-names: Artyomenko
+        given-names: Alexander
+      - family-names: Malygina
+        given-names: Tatiana
+      - family-names: Porozov
+        given-names: Yuri B
+      - family-names: Campbell
+        given-names: Ellsworth M
+      - family-names: Switzer
+        given-names: William M
+      - family-names: Skums
+        given-names: Pavel
+      - family-names: Mangul
+        given-names: Serghei
+      - family-names: Zelikovsky
+        given-names: Alex
+    editors: 
+      - family-names: Knyazev
+        given-names: Sergey
+      - family-names: Tsyvina
+        given-names: Viachaslau
+      - family-names: Shankar
+        given-names: Anupama
+      - family-names: Melnyk
+        given-names: Andrew
+      - family-names: Artyomenko
+        given-names: Alexander
+      - family-names: Malygina
+        given-names: Tatiana
+      - family-names: Porozov
+        given-names: Yuri B
+      - family-names: Campbell
+        given-names: Ellsworth M
+      - family-names: Switzer
+        given-names: William M
+      - family-names: Skums
+        given-names: Pavel
+      - family-names: Mangul
+        given-names: Serghei
+      - family-names: Zelikovsky
+        given-names: Alex
+    recipients: 
+      - family-names: Knyazev
+        given-names: Sergey
+      - family-names: Tsyvina
+        given-names: Viachaslau
+      - family-names: Shankar
+        given-names: Anupama
+      - family-names: Melnyk
+        given-names: Andrew
+      - family-names: Artyomenko
+        given-names: Alexander
+      - family-names: Malygina
+        given-names: Tatiana
+      - family-names: Porozov
+        given-names: Yuri B
+      - family-names: Campbell
+        given-names: Ellsworth M
+      - family-names: Switzer
+        given-names: William M
+      - family-names: Skums
+        given-names: Pavel
+      - family-names: Mangul
+        given-names: Serghei
+      - family-names: Zelikovsky
+        given-names: Alex
+    translators: 
+      - family-names: Knyazev
+        given-names: Sergey
+      - family-names: Tsyvina
+        given-names: Viachaslau
+      - family-names: Shankar
+        given-names: Anupama
+      - family-names: Melnyk
+        given-names: Andrew
+      - family-names: Artyomenko
+        given-names: Alexander
+      - family-names: Malygina
+        given-names: Tatiana
+      - family-names: Porozov
+        given-names: Yuri B
+      - family-names: Campbell
+        given-names: Ellsworth M
+      - family-names: Switzer
+        given-names: William M
+      - family-names: Skums
+        given-names: Pavel
+      - family-names: Mangul
+        given-names: Serghei
+      - family-names: Zelikovsky
+        given-names: Alex
+    date-published: 2021-09-27
+    identifiers: 
+      - type: doi
+        value: 10.1093/nar/gkab576
+  - title: >-
+      ViQuaS: an improved reconstruction pipeline for viral quasispecies spectra generated by next-generation sequencing
+    abstract: |
+      Abstract
+                  Motivation: The combined effect of a high replication rate and the low fidelity of the viral polymerase in most RNA viruses and some DNA viruses results in the formation of a viral quasispecies. Uncovering information about quasispecies populations significantly benefits the study of disease progression, antiviral drug design, vaccine design and viral pathogenesis. We present a new analysis pipeline called ViQuaS for viral quasispecies spectrum reconstruction using short next-generation sequencing reads. ViQuaS is based on a novel reference-assisted de novo assembly algorithm for constructing local haplotypes. A significantly extended version of an existing global strain reconstruction algorithm is also used.
+                  Results: Benchmarking results showed that ViQuaS outperformed three other previously published methods named ShoRAH, QuRe and PredictHaplo, with improvements of at least 3.1–53.9% in recall, 0–12.1% in precision and 0–38.2% in F-score in terms of strain sequence assembly and improvements of at least 0.006–0.143 in KL-divergence and 0.001–0.035 in root mean-squared error in terms of strain frequency estimation, over the next-best algorithm under various simulation settings. We also applied ViQuaS on a real read set derived from an in vitro human immunodeficiency virus (HIV)-1 population, two independent datasets of foot-and-mouth-disease virus derived from the same biological sample and a real HIV-1 dataset and demonstrated better results than other methods available.
+                  Availability and implementation:  http://sourceforge.net/projects/viquas/
+                  Contact:  d.jayasundara@student.unimelb.edu.au
+                  Supplementary information:  Supplementary data are available at Bioinformatics online.
+    type: journalArticle
+    database: DOI.org (Crossref)
+    date-accessed: 2026-09-22T14:00:46Z
+    issn: 1367-4811, 1367-4803
+    issue: 6
+    languages: 
+      - en
+    pages: 886-896
+    volume: 31
+    url: https://academic.oup.com/bioinformatics/article/31/6/886/215466
+    authors: 
+      - family-names: Jayasundara
+        given-names: Duleepa
+      - family-names: Saeed
+        given-names: I.
+      - family-names: Maheswararajah
+        given-names: Suhinthan
+      - family-names: Chang
+        given-names: B.C.
+      - family-names: Tang
+        given-names: S.-L.
+      - family-names: Halgamuge
+        given-names: Saman K.
+    editors: 
+      - family-names: Jayasundara
+        given-names: Duleepa
+      - family-names: Saeed
+        given-names: I.
+      - family-names: Maheswararajah
+        given-names: Suhinthan
+      - family-names: Chang
+        given-names: B.C.
+      - family-names: Tang
+        given-names: S.-L.
+      - family-names: Halgamuge
+        given-names: Saman K.
+    recipients: 
+      - family-names: Jayasundara
+        given-names: Duleepa
+      - family-names: Saeed
+        given-names: I.
+      - family-names: Maheswararajah
+        given-names: Suhinthan
+      - family-names: Chang
+        given-names: B.C.
+      - family-names: Tang
+        given-names: S.-L.
+      - family-names: Halgamuge
+        given-names: Saman K.
+    translators: 
+      - family-names: Jayasundara
+        given-names: Duleepa
+      - family-names: Saeed
+        given-names: I.
+      - family-names: Maheswararajah
+        given-names: Suhinthan
+      - family-names: Chang
+        given-names: B.C.
+      - family-names: Tang
+        given-names: S.-L.
+      - family-names: Halgamuge
+        given-names: Saman K.
+    date-published: 2015-03-15
+    identifiers: 
+      - type: doi
+        value: 10.1093/bioinformatics/btu754
+  - title: >-
+      Haploflow: strain-resolved de novo assembly of viral genomes
+    abstract: |
+      Abstract
+                  With viral infections, multiple related viral strains are often present due to coinfection or within-host evolution. We describe Haploflow, a deBruijn graph-based assembler for de novo genome assembly of viral strains from mixed sequence samples using a novel flow algorithm. We assess Haploflow across multiple benchmark data sets of increasing complexity, showing that Haploflow is faster and more accurate than viral haplotype assemblers and generic metagenome assemblers not aiming to reconstruct strains. We show Haploflow reconstructs viral strain genomes from patient HCMV samples and SARS-CoV-2 wastewater samples identical to clinical isolates.
+    type: journalArticle
+    database: DOI.org (Crossref)
+    date-accessed: 2026-09-22T14:01:26Z
+    issn: 1474-760X
+    issue: 1
+    journal: Genome Biol
+    languages: 
+      - en
+    pages: 212
+    volume: 22
+    url: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02426-8
+    authors: 
+      - family-names: Fritz
+        given-names: Adrian
+      - family-names: Bremges
+        given-names: Andreas
+      - family-names: Deng
+        given-names: Zhi-Luo
+      - family-names: Lesker
+        given-names: Till Robin
+      - family-names: Götting
+        given-names: Jasper
+      - family-names: Ganzenmueller
+        given-names: Tina
+      - family-names: Sczyrba
+        given-names: Alexander
+      - family-names: Dilthey
+        given-names: Alexander
+      - family-names: Klawonn
+        given-names: Frank
+      - family-names: McHardy
+        given-names: Alice Carolyn
+    editors: 
+      - family-names: Fritz
+        given-names: Adrian
+      - family-names: Bremges
+        given-names: Andreas
+      - family-names: Deng
+        given-names: Zhi-Luo
+      - family-names: Lesker
+        given-names: Till Robin
+      - family-names: Götting
+        given-names: Jasper
+      - family-names: Ganzenmueller
+        given-names: Tina
+      - family-names: Sczyrba
+        given-names: Alexander
+      - family-names: Dilthey
+        given-names: Alexander
+      - family-names: Klawonn
+        given-names: Frank
+      - family-names: McHardy
+        given-names: Alice Carolyn
+    recipients: 
+      - family-names: Fritz
+        given-names: Adrian
+      - family-names: Bremges
+        given-names: Andreas
+      - family-names: Deng
+        given-names: Zhi-Luo
+      - family-names: Lesker
+        given-names: Till Robin
+      - family-names: Götting
+        given-names: Jasper
+      - family-names: Ganzenmueller
+        given-names: Tina
+      - family-names: Sczyrba
+        given-names: Alexander
+      - family-names: Dilthey
+        given-names: Alexander
+      - family-names: Klawonn
+        given-names: Frank
+      - family-names: McHardy
+        given-names: Alice Carolyn
+    translators: 
+      - family-names: Fritz
+        given-names: Adrian
+      - family-names: Bremges
+        given-names: Andreas
+      - family-names: Deng
+        given-names: Zhi-Luo
+      - family-names: Lesker
+        given-names: Till Robin
+      - family-names: Götting
+        given-names: Jasper
+      - family-names: Ganzenmueller
+        given-names: Tina
+      - family-names: Sczyrba
+        given-names: Alexander
+      - family-names: Dilthey
+        given-names: Alexander
+      - family-names: Klawonn
+        given-names: Frank
+      - family-names: McHardy
+        given-names: Alice Carolyn
+    date-published: 2021-12
+    identifiers: 
+      - type: doi
+        value: 10.1186/s13059-021-02426-8
+  - title: >-
+      Overlap graph-based generation of haplotigs for diploids and polyploids
+    abstract: |
+      Abstract
+                  
+                    Motivation
+                    Haplotype-aware genome assembly plays an important role in genetics, medicine and various other disciplines, yet generation of haplotype-resolved de novo assemblies remains a major challenge. Beyond distinguishing between errors and true sequential variants, one needs to assign the true variants to the different genome copies. Recent work has pointed out that the enormous quantities of traditional NGS read data have been greatly underexploited in terms of haplotig computation so far, which reflects that methodology for reference independent haplotig computation has not yet reached maturity.
+                  
+                  
+                    Results
+                    We present POLYploid genome fitTEr (POLYTE) as a new approach to de novo generation of haplotigs for diploid and polyploid genomes of known ploidy. Our method follows an iterative scheme where in each iteration reads or contigs are joined, based on their interplay in terms of an underlying haplotype-aware overlap graph. Along the iterations, contigs grow while preserving their haplotype identity. Benchmarking experiments on both real and simulated data demonstrate that POLYTE establishes new standards in terms of error-free reconstruction of haplotype-specific sequence. As a consequence, POLYTE outperforms state-of-the-art approaches in various relevant aspects, where advantages become particularly distinct in polyploid settings.
+                  
+                  
+                    Availability and implementation
+                    POLYTE is freely available as part of the HaploConduct package at https://github.com/HaploConduct/HaploConduct, implemented in Python and C++.
+                  
+                  
+                    Supplementary information
+                    Supplementary data are available at Bioinformatics online.
+    type: journalArticle
+    license: https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model
+    copyright: https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model
+    database: DOI.org (Crossref)
+    date-accessed: 2026-09-22T14:04:41Z
+    issn: 1367-4803, 1367-4811
+    issue: 21
+    languages: 
+      - en
+    pages: 4281-4289
+    volume: 35
+    url: https://academic.oup.com/bioinformatics/article/35/21/4281/5474903
+    authors: 
+      - family-names: Baaijens
+        given-names: Jasmijn A
+      - family-names: Schönhuth
+        given-names: Alexander
+      - family-names: Hancock
+        given-names: John
+    editors: 
+      - family-names: Baaijens
+        given-names: Jasmijn A
+      - family-names: Schönhuth
+        given-names: Alexander
+      - family-names: Hancock
+        given-names: John
+    recipients: 
+      - family-names: Baaijens
+        given-names: Jasmijn A
+      - family-names: Schönhuth
+        given-names: Alexander
+      - family-names: Hancock
+        given-names: John
+    translators: 
+      - family-names: Baaijens
+        given-names: Jasmijn A
+      - family-names: Schönhuth
+        given-names: Alexander
+      - family-names: Hancock
+        given-names: John
+    date-published: 2019-11-01
+    identifiers: 
+      - type: doi
+        value: 10.1093/bioinformatics/btz255
