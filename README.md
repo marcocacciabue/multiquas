@@ -107,25 +107,13 @@ Multiquas includes a set of several reconstructions algorithms that may
 increase over time (if there is some interest in it). Right now it comes
 with:
 
-- [CliqueSNV](https://github.com/vtsyvina/CliqueSNV) Knyazev *et al.*
-  (2021).
-  [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576)
-
-- [QuRe](https://sourceforge.net/projects/qure/) Prosperi & Salemi
-  (2012).
-  [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)](https://doi.org/10.1093/bioinformatics/btr627)
-
-- [ViQuaS](http://sourceforge.net/projects/viquas/) Jayasundara *et al.*
-  (2015).
-  [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576)
-
-- [Haploflow](https://github.com/hzi-bifo/Haploflow) Fritz *et al.*
-  (2021).
-  [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)](https://doi.org/10.1093/bioinformatics/btu754)
-
-- [Savage](https://github.com/HaploConduct/HaploConduct) Baaijens &
-  Schönhuth (2019).
-  [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)](https://doi.org/10.1093/bioinformatics/btz2554)
+| Tool | Link | DOI | Citation |
+|----|----|----|----|
+| CliqueSNV | [![](https://img.shields.io/badge/CliqueSNV-v2.0.3-blue)](https://github.com/vtsyvina/CliqueSNV) | [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576) | Knyazev *et al.* (2021) |
+| Qure | [![](https://img.shields.io/badge/QuRe-v0.9997-blue)](https://sourceforge.net/projects/qure/) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)](https://doi.org/10.1093/bioinformatics/btr627) | Prosperi & Salemi (2012) |
+| ViQuaS | [![](https://img.shields.io/badge/ViQuaS-v1.3-blue)](http://sourceforge.net/projects/viquas/) | [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576) | Jayasundara *et al.* (2015) |
+| Haploflow | [![](https://img.shields.io/badge/Haploflow-v1.3-blue)](https://github.com/hzi-bifo/Haploflow) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)](https://doi.org/10.1093/bioinformatics/btu754) | Fritz *et al.* (2021) |
+| Savage | ![](https://img.shields.io/badge/Savage-v0.4.2-blue)\](<https://github.com/HaploConduct/HaploConduct>) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)](https://doi.org/10.1093/bioinformatics/btz2554) | Baaijens & Schönhuth (2019) |
 
 Please cite them if you use Multiquas.
 
