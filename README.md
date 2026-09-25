@@ -121,28 +121,28 @@ with:
 Please cite them if you use Multiquas. A [Bibliography
 file](citation/bibliography.bib) file is available for this.
 
-## Bionformatics tools
+## Bioinformatics tools
 
 Additionally, Multiquas make use of several more general bioinformatics
 tools:
 
-| Tool | Link | Manuscript |
-|----|----|----|
-| mafft | [![](https://img.shields.io/badge/mafft-v7.505-blue)](https://mafft.cbrc.jp/alignment/server/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/molbev/mst010.svg)](https://doi.org/10.1093/molbev/mst010) |
-| samtools | [![](https://img.shields.io/badge/samtools-v1.17-blue)](https://mafft.cbrc.jp/alignment/server/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btp352.svg)](https://doi.org/10.1093/bioinformatics/btp352) |
-| Bedtools | [![](https://img.shields.io/badge/bedtools-v2.31.1-blue)](https://bedtools.readthedocs.io/en/stable/) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btq033.svg)](https://doi.org/10.1093/bioinformatics/btq033) |
-| Bowtie2 | [![](https://img.shields.io/badge/bowtie2-2.5.1-blue)](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | [![](https://zenodo.org/badge/DOI/10.1038/nmeth.1923.svg)](https://doi.org/%2010.1038/nmeth.1923) |
-| bbduk | [![](https://img.shields.io/badge/bbmap-39.01-blue)](https://bbmap.org/) | [![](https://zenodo.org/badge/DOI/10.1371/journal.pone.0185056.svg)](https://doi.org/10.1371/journal.pone.0185056) |
-| seqtk | [![](https://img.shields.io/badge/seqtk-1.5-blue)](https://github.com/lh3/seqtk) |  |
-| Lofreq2 | [![](https://img.shields.io/badge/lofreq-2.1.5-blue)](https://csb5.github.io/lofreq/) | [![](https://zenodo.org/badge/DOI/10.1093/nar/gks918.svg)](https://doi.org/10.1093/nar/gks918) |
-| pear | [![](https://img.shields.io/badge/pear-0.9.11-blue)](https://cme.h-its.org/exelixis/web/software/pear/doc.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btt593.svg)](https://doi.org/10.1093/bioinformatics/btt593) |
-| seqkit2 | [![](https://img.shields.io/badge/seqkit2-2.13.0-blue)](https://bioinf.shenwei.me/seqkit/) | [![](https://zenodo.org/badge/DOI/10.1002/imt2.191.svg)](https://doi.org/10.1002/imt2.191) |
-| Biostrings | [![](https://img.shields.io/badge/biostrings-2.80.2-blue)](https://bioconductor.org/packages/release/bioc/html/Biostrings.html) | [![](https://zenodo.org/badge/DOI/10.18129/B9.bioc.Biostrings.svg)](https://doi.org/10.18129/B9.bioc.Biostrings) |
-| VariantAnnotation | [![](https://img.shields.io/badge/VariantAnnotation-1.58.0-blue)](https://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu168.svg)](https://doi.org/10.1093/bioinformatics/btu168) |
-| seqinr | [![](https://img.shields.io/badge/seqinr-4.2.36-blue)](https://github.com/lbbe-software/seqinr) | [![](https://zenodo.org/badge/DOI/10.1007/978-3-540-35306-5_10.svg)](https://doi.org/10.1007/978-3-540-35306-5_10) |
-| ggplot2 | [![](https://img.shields.io/badge/ggplot2-4.0.3-blue)](https://ggplot2.tidyverse.org/) | [![](https://zenodo.org/badge/DOI/10.1007/978-3-319-24277-4.svg)](https://doi.org/10.1007/978-3-319-24277-4) |
-| ape | [![](https://img.shields.io/badge/ape-5.8.1-blue)](https://ggplot2.tidyverse.org/https://cran.r-project.org/web/packages/ape/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btg412.svg)](https://doi.org/10.1093/bioinformatics/btg41210.1007/978-3-319-24277-4) |
-| voRtex | [![](https://img.shields.io/badge/voRtex-0.0.6-blue)](https://github.com/marcocacciabue/voRtex) |  |
+| Tool | Link | DOI | CITATION |
+|----|----|----|----|
+| mafft | [![](https://img.shields.io/badge/mafft-v7.505-blue)](https://mafft.cbrc.jp/alignment/server/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/molbev/mst010.svg)](https://doi.org/10.1093/molbev/mst010) | Katoh & Standley (2013) |
+| samtools | [![](https://img.shields.io/badge/samtools-v1.17-blue)](https://mafft.cbrc.jp/alignment/server/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btp352.svg)](https://doi.org/10.1093/bioinformatics/btp352) | Li *et al.* (2009) |
+| Bedtools | [![](https://img.shields.io/badge/bedtools-v2.31.1-blue)](https://bedtools.readthedocs.io/en/stable/) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btq033.svg)](https://doi.org/10.1093/bioinformatics/btq033) | Quinlan & Hall (2010) |
+| Bowtie2 | [![](https://img.shields.io/badge/bowtie2-2.5.1-blue)](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml) | [![](https://zenodo.org/badge/DOI/10.1038/nmeth.1923.svg)](https://doi.org/%2010.1038/nmeth.1923) | Langmead & Salzberg (2012) |
+| bbduk | [![](https://img.shields.io/badge/bbmap-39.01-blue)](https://bbmap.org/) | [![](https://zenodo.org/badge/DOI/10.1371/journal.pone.0185056.svg)](https://doi.org/10.1371/journal.pone.0185056) | Bushnell *et al.* (2017) |
+| seqtk | [![](https://img.shields.io/badge/seqtk-1.5-blue)](https://github.com/lh3/seqtk) |  |  |
+| Lofreq2 | [![](https://img.shields.io/badge/lofreq-2.1.5-blue)](https://csb5.github.io/lofreq/) | [![](https://zenodo.org/badge/DOI/10.1093/nar/gks918.svg)](https://doi.org/10.1093/nar/gks918) | Wilm *et al.* (2012) |
+| pear | [![](https://img.shields.io/badge/pear-0.9.11-blue)](https://cme.h-its.org/exelixis/web/software/pear/doc.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btt593.svg)](https://doi.org/10.1093/bioinformatics/btt593) | Zhang *et al.* (2014) |
+| seqkit2 | [![](https://img.shields.io/badge/seqkit2-2.13.0-blue)](https://bioinf.shenwei.me/seqkit/) | [![](https://zenodo.org/badge/DOI/10.1002/imt2.191.svg)](https://doi.org/10.1002/imt2.191) | Shen *et al.* (2024) |
+| Biostrings | [![](https://img.shields.io/badge/biostrings-2.80.2-blue)](https://bioconductor.org/packages/release/bioc/html/Biostrings.html) | [![](https://zenodo.org/badge/DOI/10.18129/B9.bioc.Biostrings.svg)](https://doi.org/10.18129/B9.bioc.Biostrings) | H. Pagès (2017) |
+| VariantAnnotation | [![](https://img.shields.io/badge/VariantAnnotation-1.58.0-blue)](https://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu168.svg)](https://doi.org/10.1093/bioinformatics/btu168) | Obenchain *et al.* (2014) |
+| seqinr | [![](https://img.shields.io/badge/seqinr-4.2.36-blue)](https://github.com/lbbe-software/seqinr) | [![](https://zenodo.org/badge/DOI/10.1007/978-3-540-35306-5_10.svg)](https://doi.org/10.1007/978-3-540-35306-5_10) | Charif & Lobry (2007) |
+| ggplot2 | [![](https://img.shields.io/badge/ggplot2-4.0.3-blue)](https://ggplot2.tidyverse.org/) | [![](https://zenodo.org/badge/DOI/10.1007/978-3-319-24277-4.svg)](https://doi.org/10.1007/978-3-319-24277-4) | Wickham (2016) |
+| ape | [![](https://img.shields.io/badge/ape-5.8.1-blue)](https://ggplot2.tidyverse.org/https://cran.r-project.org/web/packages/ape/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btg412.svg)](https://doi.org/10.1093/bioinformatics/btg41210.1007/978-3-319-24277-4) | Paradis *et al.* (2004) |
+| voRtex | [![](https://img.shields.io/badge/voRtex-0.0.6-blue)](https://github.com/marcocacciabue/voRtex) |  |  |
 
 Please consider citing them if you use Multiquas. A [Bibliography
 file](citation/bibliography.bib) file is available for this.
@@ -158,12 +158,38 @@ haplotigs for diploids and polyploids. Bioinformatics 35 (21):
 
 </div>
 
+<div id="ref-bushnell_bbmerge_2017" class="csl-entry">
+
+Bushnell B., Rood J. & Singer E. (2017). BBMerge – accurate paired
+shotgun read merging via overlap. PLOS ONE 12 (10): e0185056.
+<https://doi.org/10.1371/journal.pone.0185056>.
+
+</div>
+
+<div id="ref-greenbaum_seqinr_2007" class="csl-entry">
+
+Charif D. & Lobry J.R. (2007). SeqinR 1.0-2: A contributed package to
+the r project for statistical computing devoted to biological sequences
+retrieval and analysis. In: Bastolla U., Porto M., Roman H.E. &
+Vendruscolo M. (eds.). Structural approaches to sequence evolution.
+Springer Berlin Heidelberg, Berlin, Heidelberg, p. 207–232.
+<https://doi.org/10.1007/978-3-540-35306-5_10>.
+
+</div>
+
 <div id="ref-fritz_haploflow_2021" class="csl-entry">
 
 Fritz A., Bremges A., Deng Z.-L., Lesker T.R., Götting J., Ganzenmueller
 T., Sczyrba A., Dilthey A., Klawonn F. & McHardy A.C. (2021). Haploflow:
 Strain-resolved de novo assembly of viral genomes. Genome Biology 22
 (1): 212. <https://doi.org/10.1186/s13059-021-02426-8>.
+
+</div>
+
+<div id="ref-h_pages_biostrings_2017" class="csl-entry">
+
+H. Pagès P.A. (2017). Biostrings. Bioconductor.
+<https://doi.org/10.18129/B9.BIOC.BIOSTRINGS>.
 
 </div>
 
@@ -174,6 +200,15 @@ Halgamuge S.K. (2015). ViQuaS: An improved reconstruction pipeline for
 viral quasispecies spectra generated by next-generation sequencing.
 Bioinformatics 31 (6): 886–896.
 <https://doi.org/10.1093/bioinformatics/btu754>.
+
+</div>
+
+<div id="ref-katoh_mafft_2013" class="csl-entry">
+
+Katoh K. & Standley D.M. (2013). MAFFT multiple sequence alignment
+software version 7: Improvements in performance and usability. Molecular
+Biology and Evolution 30 (4): 772–780.
+<https://doi.org/10.1093/molbev/mst010>.
 
 </div>
 
@@ -188,12 +223,90 @@ Nucleic Acids Research 49 (17): e102–e102.
 
 </div>
 
+<div id="ref-langmead_fast_2012" class="csl-entry">
+
+Langmead B. & Salzberg S.L. (2012). Fast gapped-read alignment with
+bowtie 2. Nature Methods 9 (4): 357–359.
+<https://doi.org/10.1038/nmeth.1923>.
+
+</div>
+
+<div id="ref-li_sequence_2009" class="csl-entry">
+
+Li H., Handsaker B., Wysoker A., Fennell T., Ruan J., Homer N., Marth
+G., Abecasis G., Durbin R. & 1000 Genome Project Data Processing
+Subgroup (2009). The sequence alignment/map format and SAMtools.
+Bioinformatics 25 (16): 2078–2079.
+<https://doi.org/10.1093/bioinformatics/btp352>.
+
+</div>
+
+<div id="ref-obenchain_variantannotation_2014" class="csl-entry">
+
+Obenchain V., Lawrence M., Carey V., Gogarten S., Shannon P. & Morgan M.
+(2014). VariantAnnotation : A bioconductor package for exploration and
+annotation of genetic variants. Bioinformatics 30 (14): 2076–2078.
+<https://doi.org/10.1093/bioinformatics/btu168>.
+
+</div>
+
+<div id="ref-paradis_ape_2004" class="csl-entry">
+
+Paradis E., Claude J. & Strimmer K. (2004). APE: Analyses of
+phylogenetics and evolution in r language. Bioinformatics 20 (2):
+289–290. <https://doi.org/10.1093/bioinformatics/btg412>.
+
+</div>
+
 <div id="ref-prosperi_qure_2012" class="csl-entry">
 
 Prosperi M.C.F. & Salemi M. (2012). QuRe: Software for viral
 quasispecies reconstruction from next-generation sequencing data.
 Bioinformatics 28 (1): 132–133.
 <https://doi.org/10.1093/bioinformatics/btr627>.
+
+</div>
+
+<div id="ref-quinlan_bedtools_2010" class="csl-entry">
+
+Quinlan A.R. & Hall I.M. (2010). BEDTools: A flexible suite of utilities
+for comparing genomic features. Bioinformatics 26 (6): 841–842.
+<https://doi.org/10.1093/bioinformatics/btq033>.
+
+</div>
+
+<div id="ref-shen_seqkit2_2024" class="csl-entry">
+
+Shen W., Sipos B. & Zhao L. (2024). SeqKit2: A swiss army knife for
+sequence and alignment processing. iMeta 3 (3): e191.
+<https://doi.org/10.1002/imt2.191>.
+
+</div>
+
+<div id="ref-wickham_ggplot2_2016" class="csl-entry">
+
+Wickham H. (2016). ggplot2: Elegant graphics for data analysis.
+Springer-Verlag New York. <https://ggplot2.tidyverse.org>.
+
+</div>
+
+<div id="ref-wilm_lofreq_2012" class="csl-entry">
+
+Wilm A., Aw P.P.K., Bertrand D., Yeo G.H.T., Ong S.H., Wong C.H., Khor
+C.C., Petric R., Hibberd M.L. & Nagarajan N. (2012). LoFreq: A
+sequence-quality aware, ultra-sensitive variant caller for uncovering
+cell-population heterogeneity from high-throughput sequencing datasets.
+Nucleic Acids Research 40 (22): 11189–11201.
+<https://doi.org/10.1093/nar/gks918>.
+
+</div>
+
+<div id="ref-zhang_pear_2014" class="csl-entry">
+
+Zhang J., Kobert K., Flouri T. & Stamatakis A. (2014). PEAR: A fast and
+accurate illumina paired-end <span class="nocase">reAd</span>
+<span class="nocase">mergeR</span>. Bioinformatics 30 (5): 614–620.
+<https://doi.org/10.1093/bioinformatics/btt593>.
 
 </div>
 
