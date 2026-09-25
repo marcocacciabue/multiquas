@@ -68,11 +68,14 @@ nextflow run marcocacciabue/multiquas -resume -profile fast --input_csv samples.
 ```
 
 Note: this command is different in the way that it will clone the repo
-directly to a nextflow folder for you. It is the same \## What is that
-profile variable? Multiquas runs differents reconstructions softwares
-(Clique, Qure, Viquas, Haploflow, Savage) and with two modes, single and
-multiple (using all references). The profiles option is an easy way to
-define how to run the pipeline.
+directly to a nextflow folder for you and run the pipeline from there.
+
+## What is that profile variable?
+
+Multiquas runs differents reconstructions softwares (Clique, Qure,
+Viquas, Haploflow, Savage) and with two modes, single and multiple
+(using all references). The profiles option is an easy way to define how
+to run the pipeline.
 
 ``` bash
 # profile complete will run ALL the reconstructions algorithms for each sample. Most accurate option but it may take
@@ -115,7 +118,8 @@ with:
 | Haploflow | [![](https://img.shields.io/badge/Haploflow-v1.3-blue)](https://github.com/hzi-bifo/Haploflow) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu754.svg)](https://doi.org/10.1093/bioinformatics/btu754) | Fritz *et al.* (2021) |
 | Savage | [![](https://img.shields.io/badge/Savage-v0.4.2-blue)](https://github.com/HaploConduct/HaploConduct) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)](https://doi.org/10.1093/bioinformatics/btz2554) | Baaijens & Schönhuth (2019) |
 
-Please cite them if you use Multiquas.
+Please cite them if you use Multiquas. A [Bibliography
+file](citation/bibliography.bib) file is available for this.
 
 ## Bionformatics tools
 
@@ -139,6 +143,9 @@ tools:
 | ggplot2 | [![](https://img.shields.io/badge/ggplot2-4.0.3-blue)](https://ggplot2.tidyverse.org/) | [![](https://zenodo.org/badge/DOI/10.1007/978-3-319-24277-4.svg)](https://doi.org/10.1007/978-3-319-24277-4) |
 | ape | [![](https://img.shields.io/badge/ape-5.8.1-blue)](https://ggplot2.tidyverse.org/https://cran.r-project.org/web/packages/ape/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btg412.svg)](https://doi.org/10.1093/bioinformatics/btg41210.1007/978-3-319-24277-4) |
 | voRtex | [![](https://img.shields.io/badge/voRtex-0.0.6-blue)](https://github.com/marcocacciabue/voRtex) |  |
+
+Please consider citing them if you use Multiquas. A [Bibliography
+file](citation/bibliography.bib) file is available for this.
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">

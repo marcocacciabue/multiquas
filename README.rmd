@@ -59,7 +59,11 @@ Each line in the cvs file is a different sample of name sample_id. fastq_1 and f
 nextflow run marcocacciabue/multiquas -resume -profile fast --input_csv samples.csv 
 ```
 
-Note: this command is different in the way that it will clone the repo directly to a nextflow folder for you. It is the same \## What is that profile variable? Multiquas runs differents reconstructions softwares (Clique, Qure, Viquas, Haploflow, Savage) and with two modes, single and multiple (using all references). The profiles option is an easy way to define how to run the pipeline.
+Note: this command is different in the way that it will clone the repo directly to a nextflow folder for you and run the pipeline from there.
+
+## What is that profile variable? 
+
+Multiquas runs differents reconstructions softwares (Clique, Qure, Viquas, Haploflow, Savage) and with two modes, single and multiple (using all references). The profiles option is an easy way to define how to run the pipeline.
 
 ``` bash
 # profile complete will run ALL the reconstructions algorithms for each sample. Most accurate option but it may take
@@ -99,7 +103,7 @@ Multiquas includes a set of several reconstructions algorithms that may increase
 | Savage | [![](https://img.shields.io/badge/Savage-v0.4.2-blue)](https://github.com/HaploConduct/HaploConduct) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btz255.svg)](https://doi.org/10.1093/bioinformatics/btz2554) |@baaijens_overlap_2019 |
 
 
-Please cite them if you use Multiquas.
+Please cite them if you use Multiquas. A [Bibliography file](citation/bibliography.bib)   file is available for this.
 
 ## Bionformatics tools
 Additionally, Multiquas make use of several more general bioinformatics tools:
@@ -124,7 +128,8 @@ Additionally, Multiquas make use of several more general bioinformatics tools:
 | voRtex | [![](https://img.shields.io/badge/voRtex-0.0.6-blue)](https://github.com/marcocacciabue/voRtex) | |
 
 
-
+Please consider citing them if you use Multiquas. A [Bibliography file](citation/bibliography.bib) file is available for this.
+ 
 
 
 
