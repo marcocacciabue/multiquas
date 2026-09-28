@@ -51,7 +51,7 @@ process GET_READS {
      echo ${contig_name}  >  '${contig_name}.txt'
 
     seqtk subseq $general_ref '${contig_name}.txt' > "${contig_name}.fasta"
-    samtools view $map_bam ${contig_name} -b | samtools sort -n - | samtools view -f2 -b | samtools bam2fq -1 s.1.fq -2 s.2.fq -0 o.fq -s s.fq -n -
+    samtools view $map_bam ${contig_name} -b | samtools sort -n - | samtools bam2fq -1 s.1.fq -2 s.2.fq -0 o.fq -s s.fq -n -
 
     
     fi
