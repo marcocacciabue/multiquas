@@ -29,8 +29,8 @@ process ALIGNMENT_M {
     """
     bowtie2-build $general_ref ref
   
-    bowtie2 --no-discordant --no-mixed -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
-    #bowtie2 -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
+    #bowtie2 --no-discordant --no-mixed -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
+    bowtie2 -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
 
     samtools index -@ ${task.cpus} sorted.bam sorted.bai
     samtools idxstats sorted.bam > stats.txt
