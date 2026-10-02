@@ -95,7 +95,7 @@ nextflow run marcocacciabue/multiquas -resume --input_csv samples.csv --viquas_m
 Multiquas includes a set of several reconstructions algorithms that may increase over time (if there is some interest in it). Right now it comes with:
 
 | Tool | Link | DOI | Citation |
-|------------------|------------------|------------------|------------------|
+|----|----|----|----|
 | CliqueSNV | [![](https://img.shields.io/badge/CliqueSNV-v2.0.3-blue)](https://github.com/vtsyvina/CliqueSNV) | [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576) | @knyazev_accurate_2021 |
 | Qure | [![](https://img.shields.io/badge/QuRe-v0.9997-blue)](https://sourceforge.net/projects/qure/) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btr627.svg)](https://doi.org/10.1093/bioinformatics/btr627) | @prosperi_qure_2012 |
 | ViQuaS | [![](https://img.shields.io/badge/ViQuaS-v1.3-blue)](http://sourceforge.net/projects/viquas/) | [![](https://zenodo.org/badge/DOI/10.1093/nar/gkab576.svg)](https://doi.org/10.1093/nar/gkab576) | @jayasundara_viquas_2015 |
@@ -109,7 +109,7 @@ Please cite them if you use Multiquas. A [Bibliography file](citation/bibliograp
 Additionally, Multiquas make use of several more general bioinformatics tools:
 
 | Tool | Link | DOI | CITATION |
-|------------------------|--------------|------------------------|-----------|
+|----|----|----|----|
 | mafft | [![](https://img.shields.io/badge/mafft-v7.505-blue)](https://mafft.cbrc.jp/alignment/server/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/molbev/mst010.svg)](https://doi.org/10.1093/molbev/mst010) | @katoh_mafft_2013 |
 | samtools | [![](https://img.shields.io/badge/samtools-v1.17-blue)](https://mafft.cbrc.jp/alignment/server/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btp352.svg)](https://doi.org/10.1093/bioinformatics/btp352) | @li_sequence_2009 |
 | Bedtools | [![](https://img.shields.io/badge/bedtools-v2.31.1-blue)](https://bedtools.readthedocs.io/en/stable/) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btq033.svg)](https://doi.org/10.1093/bioinformatics/btq033) | @quinlan_bedtools_2010 |
@@ -123,7 +123,7 @@ Additionally, Multiquas make use of several more general bioinformatics tools:
 | VariantAnnotation | [![](https://img.shields.io/badge/VariantAnnotation-1.58.0-blue)](https://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btu168.svg)](https://doi.org/10.1093/bioinformatics/btu168) | @obenchain_variantannotation_2014 |
 | seqinr | [![](https://img.shields.io/badge/seqinr-4.2.36-blue)](https://github.com/lbbe-software/seqinr) | [![](https://zenodo.org/badge/DOI/10.1007/978-3-540-35306-5_10.svg)](https://doi.org/10.1007/978-3-540-35306-5_10) | @greenbaum_seqinr_2007 |
 | ggplot2 | [![](https://img.shields.io/badge/ggplot2-4.0.3-blue)](https://ggplot2.tidyverse.org/) | [![](https://zenodo.org/badge/DOI/10.1007/978-3-319-24277-4.svg)](https://doi.org/10.1007/978-3-319-24277-4) | @wickham_ggplot2_2016 |
-| ape | [![](https://img.shields.io/badge/ape-5.8.1-blue)](https://ggplot2.tidyverse.org/https://cran.r-project.org/web/packages/ape/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btg412.svg)](https://doi.org/10.1093/bioinformatics/btg41210.1007/978-3-319-24277-4) |  @paradis_ape_2004 |
+| ape | [![](https://img.shields.io/badge/ape-5.8.1-blue)](https://ggplot2.tidyverse.org/https://cran.r-project.org/web/packages/ape/index.html) | [![](https://zenodo.org/badge/DOI/10.1093/bioinformatics/btg412.svg)](https://doi.org/10.1093/bioinformatics/btg41210.1007/978-3-319-24277-4) | @paradis_ape_2004 |
 | voRtex | [![](https://img.shields.io/badge/voRtex-0.0.6-blue)](https://github.com/marcocacciabue/voRtex) |  |  |
 
 Please consider citing them if you use Multiquas. A [Bibliography file](citation/bibliography.bib) file is available for this.
