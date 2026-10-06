@@ -28,7 +28,8 @@ process ALIGNMENT_M {
     script:
     """
     bowtie2-build $general_ref ref
-  
+    
+    #TODO add flag to decide if a strict alignment is needed (should be applied to the single alinment as well)
     #bowtie2 --no-discordant --no-mixed -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
     bowtie2 -p ${task.cpus} -x ref -1 ${read1}  -2 ${read2} | samtools view -@ ${task.cpus} -bT $general_ref - | samtools sort -@ ${task.cpus} -m 2G - > sorted.bam
 
@@ -44,6 +45,10 @@ process ALIGNMENT_M {
    #generate list of references in bam file
 
     samtools view -H map.bam | grep -P '^@SQ' | cut -f 2 -d ':' | cut -f 1 > references_list.txt
-    echo "unmapped" >> references_list.txt
+    
+    
+    #TODO create flag to add this step or not. Should be a good addition to the strict alignment step
+    
+    #echo "unmapped" >> references_list.txt
     """
 }
