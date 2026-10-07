@@ -2,7 +2,7 @@
 
 process FILTER_HAPLOTYPES_BY_LENGTH {
   label 'process_low'
-  container "cacciabue/seqkit"
+  container "cacciabue/multiquas:tools.v0.0.1"
   tag "${sample_id}"
   containerOptions "--cpus=${task.cpus}"
   input:

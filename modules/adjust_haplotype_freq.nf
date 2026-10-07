@@ -33,8 +33,7 @@ process ADJUST_HAPLOTYPE_FREQ {
     """
     #!/usr/bin/Rscript
      library(ape)
-   ## TODO maybe this process could be managed by the filtering step. adjusting
-   ## proportions in bash instead of R.
+
       
    stats<-read.table('${stats}')
    names(stats)<-c("references","length","mapped_reads","unmapped_reads")
