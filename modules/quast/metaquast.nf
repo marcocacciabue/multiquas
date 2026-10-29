@@ -3,7 +3,7 @@
 process METAQUAST {
   label 'process_high'
 
-  container "cacciabue/multiquas:viquas.v0.0.1"  
+  container "cacciabue/multiquas:metaquast.v0.0.1"  
   tag "${[sample_id, contig_name].join(':')}"
   containerOptions "--cpus=${task.cpus}"
   

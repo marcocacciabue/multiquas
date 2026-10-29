@@ -35,13 +35,14 @@ def Logo() {
                      viquas multiple:    ${params.viquas_m} 
 
                      summary:            ${params.summary}  
-                   
+                     metaquast:          ${params.metaquast}
                      """.stripIndent()
 }
 
 
 // Primary input
 params.input_csv    = "samples.csv"
+params.ground_truth_fasta    = "samples.csv"
 
 // Reconstructer selection. Defaults are clique, haploflow and qure.
 params.clique_s     = "ON"
@@ -57,6 +58,7 @@ params.viquas_m     = "OFF"
 
 // Create summary?
 params.summary      = "ON"
+params.metaquast    = "OFF"
 
 
 // Workflows INCLUDE statements
@@ -84,8 +86,13 @@ workflow {
  
   SAVE(RECONSTRUCT.out.reconstruction_ch,
       RECONSTRUCT.out.reconstruction_ch_summary)
-
   
+  if (params.metaquast == "ON"){
+      def ground_truth_fasta = file("${params.ground_truth_fasta}")
+
+    ground_truth_ch = Channel.fromPath(ground_truth_fasta)
+    
+}
   workflow.onComplete = { 
     if (workflow.success) { println "✓ Pipeline ran successfully!" } else 
     { println "❌ Pipeline failed! Error: ${workflow.errorMessage}" }
